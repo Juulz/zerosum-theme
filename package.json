@@ -1,0 +1,15 @@
+{
+  "name": "zerosum-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ZeroSum custom CSS theme by Juulz, for the Magic CSS browser extension",
+  "type": "module",
+  "scripts": {
+    "build": "sass --no-source-map src/zerosum.scss dist/zerosum.css",
+    "check": "node scripts/check.mjs && npm run build",
+    "bump": "node scripts/bump-version.mjs"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}
