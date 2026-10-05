@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 // $css-version format: MM.DD.YY.N, where N counts edits made that day.
-const file = "src/zerosum.scss";
+const file = "rules.scss";
 const src = readFileSync(file, "utf8");
 const pattern = /^\$css-version:\s*"([^"]*)";/m;
 const match = src.match(pattern);
