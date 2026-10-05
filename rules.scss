@@ -3,15 +3,8 @@
 // ============================================
 $css-version: "10.05.26.8";
 
-// NOTES
-// - Magic CSS: bump $css-version on each edit; if the badge doesn't update,
-//   close/reopen the editor (or reload the page).
-// - Magic CSS uses an old Sass: write rgba(0, 0, 0, 0.1), not rgb(0 0 0 / 0.1).
-// - Site uses Tailwind layers: its !important classes (e.g. hover:!bg-primary/10)
-//   beat my !important. Work around with background-image or box-shadow fills.
-// - Plain (non-!important) site classes lose to any of my rules.
-// - Translucent site backgrounds (bg-primary/5, my 50% table-row mix) show the
-//   panel color behind them; set opaque colors when the result looks washed out.
+// Colors come from a theme file (themes/*.scss); this file uses only variables.
+// Magic CSS quirks and override tricks: see NOTES.md.
 
 // ==========================================
 // 1. SELECTOR & CLASS NAME DICTIONARY
@@ -28,46 +21,8 @@ $table-row:          'div[role="row"], div[data-budget-category-id], [class*="vi
 $budget-group-row:   'div[role="row"].bg-budget-group';
 
 // ==========================================
-// 2. GLOBAL THEME VARIABLES
+// 2. SITE CSS VARIABLES
 // ==========================================
-
-// SCSS color variables
-$account-page-header:                hsl(16,37%,96%);
-$calendar-selected:                  hsl(16, 37%, 93%);
-$calendar-selected-hover:            hsl(16, 37%, 90%);
-$calendar-weekday-hover:             hsl(0,0%,91%);
-$calendar-weekend:                   hsl(0, 0%, 95%);
-$calendar-weekend-hover:             hsl(0,0%,91%);
-$category-header-bg:                 hsl(55, 15%, 85%);
-$category-header-text:               hsl(54, 41%, 15%);
-$forecast-hover:                     hsl(55, 15%, 74%);
-$forecast-resting:                   hsl(55, 15%, 84%);
-$group-header-bg-hover:              hsl(44, 45%, 78%);
-$group-header-text:                  hsl(17, 41%, 30%);
-$page-background:                     hsl(16, 37%, 96%);
-$primary-button-bg:                  hsl(55, 15%, 80%);
-$primary-button-bg-hover:            hsl(55, 15%, 75%);
-$primary-button-text:                hsl(17, 41%, 35%);
-$schedule-hover:                     hsl(55, 15%, 76%);
-$schedule-resting:                   hsl(55, 15%, 82%);
-$scheduled-bg:                       hsl(55, 15%, 80%);
-$scheduled-header:                   hsl(55, 10%, 75%);
-$scheduled-header-hover:             hsl(55, 15%, 70%);
-$sidebar-bg:                         hsl(44, 45%, 85%);
-$table-bg:                           hsl(16, 37%, 92%);
-$table-hover:                        hsl(15, 45%, 85%);
-$table-selected:                     hsl(45, 75%, 93%);
-$table-selected-hover:               hsl(45, 75%, 85%);
-$toggle-button-notpressed-bg-hover:  hsl(0, 0%, 85%);
-$toggle-button-notpressed-text-resting: hsl(0, 0%, 70%);
-$transaction-approve-hover:          hsl(15, 45%, 53%);
-$transaction-approve-accent:         hsl(15, 45%, 50%);
-$transaction-approve-button:         hsl(15, 45%, 60%);
-$transaction-card-hover:             hsl(44, 45%, 88%);
-$group-header-bg: $sidebar-bg;
-$destructive:                        hsl(0, 100%, 35%);
-$positive:                           hsl(123, 76%, 30%);
-$chart-positive:                     hsl(123, 76%, 33%);
 
 :root {
   --mantine-color-brand-light-hover: #{$primary-button-bg-hover} !important;
@@ -108,7 +63,7 @@ body::after {
   }
   
   span, svg, button {
-    color: #fff !important;
+    color: $transaction-approve-text !important;
   }
 }
 
@@ -158,14 +113,14 @@ button.mantine-UnstyledButton-root.mantine-Button-root,
   }
 
   &[aria-pressed="false"] {
-    background: #fff !important; 
-    background-color: #fff !important; 
+    background: $toggle-button-notpressed-bg !important; 
+    background-color: $toggle-button-notpressed-bg !important; 
     color: $toggle-button-notpressed-text-resting !important;
     
     &:not([data-disabled]):hover {
       background: $toggle-button-notpressed-bg-hover !important; 
       background-color: $toggle-button-notpressed-bg-hover !important; 
-      color: #fff !important; 
+      color: $toggle-button-notpressed-text-hover !important; 
     }
   }
 }
@@ -350,10 +305,10 @@ div.border-dashed.cursor-pointer.select-none:hover {
 // --- Right Sidebar Transaction Card List (framed like the scheduled panel) ---
 .mantine-ScrollArea-root:has(> .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 button[data-testid="transaction-card-activator"]) {
   > .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 {
-    background-color: #fff !important;
+    background-color: $transaction-list-bg !important;
     border: 1px solid var(--surface-border, var(--border)) !important;
     border-radius: var(--radius-lg, 0.5rem) !important;
-    box-shadow: var(--shadow-card, 0 1px 2px rgba(0, 0, 0, 0.06)) !important;
+    box-shadow: var(--shadow-card, 0 1px 2px $transaction-list-shadow) !important;
     padding: 0.75rem !important;
     overflow: hidden !important;
 
@@ -383,9 +338,9 @@ div[class*="flex"][class*="cursor-pointer"]:has(button[data-testid="transaction-
 
 // 1. Red Over-Budget State (Destructive Strong)
 div[class*="bg-destructive-strong"] {
-  background-color: hsl(0, 76%, 90%) !important;
-  background: hsl(0, 76%, 90%) !important;
-  border-color: hsl(230, 10%, 89%) !important;
+  background-color: $over-budget-bg !important;
+  background: $over-budget-bg !important;
+  border-color: $budget-banner-border !important;
   border-width: 1px !important;
 
   p, h1, div:not([class*="mantine-RollingNumber"]), svg {
@@ -421,9 +376,9 @@ div[class*="bg-destructive-strong"] {
 
 // 2. Green Under-Budget / Available State
 div[class*="bg-positive-strong"] {
-  background-color: hsl(0, 0%, 100%) !important;
-  background: hsl(95, 36%, 85%) !important;
-  border-color: hsl(230, 10%, 89%) !important;
+  background-color: $under-budget-bg !important;
+  background: $under-budget-bg !important;
+  border-color: $budget-banner-border !important;
   border-width: 1px !important;
 
   p, h1, div:not([class*="mantine-RollingNumber"]), svg {
@@ -442,14 +397,14 @@ div[class*="bg-positive-strong"] {
     span, 
     .mantine-RollingNumber-char,
     .mantine-RollingNumber-digitColumn span {
-      color: hsl(95, 76%, 33%) !important;
+      color: $under-budget-text !important;
     }
   }
 
   span[class*="bg-white"] {
-    background-color: color-mix(in srgb, hsl(95, 36%, 83%) 12%, transparent) !important;
+    background-color: color-mix(in srgb, var(--positive, var(--chart-positive)) 12%, transparent) !important;
     background: color-mix(in srgb, var(--positive, var(--chart-positive)) 12%, transparent) !important;
-    color: hsl(95, 76%, 33%) !important;
+    color: $under-budget-text !important;
 
     &:hover {
       background-color: color-mix(in srgb, var(--positive, var(--chart-positive)) 22%, transparent) !important;
