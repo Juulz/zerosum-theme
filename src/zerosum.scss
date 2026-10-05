@@ -1,0 +1,580 @@
+// ============================================
+// VERSION MARKER — ZeroSum Custom CSS by Juulz
+// ============================================
+$css-version: "10.05.26.8";
+
+// NOTES
+// - Magic CSS: bump $css-version on each edit; if the badge doesn't update,
+//   close/reopen the editor (or reload the page).
+// - Magic CSS uses an old Sass: write rgba(0, 0, 0, 0.1), not rgb(0 0 0 / 0.1).
+// - Site uses Tailwind layers: its !important classes (e.g. hover:!bg-primary/10)
+//   beat my !important. Work around with background-image or box-shadow fills.
+// - Plain (non-!important) site classes lose to any of my rules.
+// - Translucent site backgrounds (bg-primary/5, my 50% table-row mix) show the
+//   panel color behind them; set opaque colors when the result looks washed out.
+
+// ==========================================
+// 1. SELECTOR & CLASS NAME DICTIONARY
+// ==========================================
+$primary-border-btn: 'button[class*="border-l-[3px]"][class*="bg-primary/5"], div[class*="border-l-[3px]"][class*="bg-primary/5"]';
+$budget-header-btn:  'button[class*="group/type-header"]';
+// Dynamic Sidebar Mapping - Unifies standard sidebar, budget side overview, and calendar side layouts
+$sidebar-inner: '[data-slot="sidebar-inner"], .bg-sidebar, div.flex.items-center.bg-muted\\/50, div[id="budget-table-side"] div[class*="bg-panel"], div[id="calendar-side"] div[class*="bg-panel"]';
+$sidebar-button:     '[data-slot="sidebar-menu-button"]';
+$nav-link:           '.mantine-NavLink-root';
+$sidebar-accent:     '.hover\\:bg-sidebar-accent, .hover\\:bg-sidebar-accent\\/40, .hover\\:bg-sidebar-accent\\/50';
+
+$table-row:          'div[role="row"], div[data-budget-category-id], [class*="virtuoso-item-list"] > div, .mantine-Table-tr';
+$budget-group-row:   'div[role="row"].bg-budget-group';
+
+// ==========================================
+// 2. GLOBAL THEME VARIABLES
+// ==========================================
+
+// SCSS color variables
+$account-page-header:                hsl(16,37%,96%);
+$calendar-selected:                  hsl(16, 37%, 93%);
+$calendar-selected-hover:            hsl(16, 37%, 90%);
+$calendar-weekday-hover:             hsl(0,0%,91%);
+$calendar-weekend:                   hsl(0, 0%, 95%);
+$calendar-weekend-hover:             hsl(0,0%,91%);
+$category-header-bg:                 hsl(55, 15%, 85%);
+$category-header-text:               hsl(54, 41%, 15%);
+$forecast-hover:                     hsl(55, 15%, 74%);
+$forecast-resting:                   hsl(55, 15%, 84%);
+$group-header-bg-hover:              hsl(44, 45%, 78%);
+$group-header-text:                  hsl(17, 41%, 30%);
+$page-background:                     hsl(16, 37%, 96%);
+$primary-button-bg:                  hsl(55, 15%, 80%);
+$primary-button-bg-hover:            hsl(55, 15%, 75%);
+$primary-button-text:                hsl(17, 41%, 35%);
+$schedule-hover:                     hsl(55, 15%, 76%);
+$schedule-resting:                   hsl(55, 15%, 82%);
+$scheduled-bg:                       hsl(55, 15%, 80%);
+$scheduled-header:                   hsl(55, 10%, 75%);
+$scheduled-header-hover:             hsl(55, 15%, 70%);
+$sidebar-bg:                         hsl(44, 45%, 85%);
+$table-bg:                           hsl(16, 37%, 92%);
+$table-hover:                        hsl(15, 45%, 85%);
+$table-selected:                     hsl(45, 75%, 93%);
+$table-selected-hover:               hsl(45, 75%, 85%);
+$toggle-button-notpressed-bg-hover:  hsl(0, 0%, 85%);
+$toggle-button-notpressed-text-resting: hsl(0, 0%, 70%);
+$transaction-approve-hover:          hsl(15, 45%, 53%);
+$transaction-approve-accent:         hsl(15, 45%, 50%);
+$transaction-approve-button:         hsl(15, 45%, 60%);
+$transaction-card-hover:             hsl(44, 45%, 88%);
+$group-header-bg: $sidebar-bg;
+$destructive:                        hsl(0, 100%, 35%);
+$positive:                           hsl(123, 76%, 30%);
+$chart-positive:                     hsl(123, 76%, 33%);
+
+:root {
+  --mantine-color-brand-light-hover: #{$primary-button-bg-hover} !important;
+  --mantine-color-brand-light:       #{$primary-button-bg} !important;
+  --background:                      #{$page-background} !important;
+  --destructive:                     #{$destructive} !important;
+  --chart-positive:                  #{$chart-positive} !important;
+  --positive:                        #{$positive} !important;
+}
+
+// Version badge (after the color definitions so it can use them)
+body::after {
+  content: "CSS #{$css-version}";
+  position: fixed;
+  bottom: 4px;
+  left: 50px;
+  z-index: 99999;
+  padding: 1px 6px;
+  font: 12px/1.4 monospace;
+  color: $group-header-text;
+  background: $sidebar-bg;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+// ==========================================
+// 3. COMPONENT STYLES & OVERRIDES (Flat & Safe)
+// ==========================================
+
+// --- Primary Sidebar & Layout Borders ---
+#{$primary-border-btn} {
+  background-color: $transaction-approve-button !important;
+  border-left-color: $transaction-approve-accent !important;
+
+  &:hover {
+    background-color: $transaction-approve-hover !important;
+  }
+  
+  span, svg, button {
+    color: #fff !important;
+  }
+}
+
+// --- Scheduled Header Bar Button ---
+div.sticky div[class*="hidden"][class*="md:grid"] {
+  background-color: $scheduled-header !important;  
+  
+  &:hover {
+    background-color: $scheduled-header-hover !important;
+  }
+}
+
+// --- Main Layout Header Base ---
+div.sticky[class*="top-0"][class*="bg-background"][class*="hidden"][class*="md:flex"] {
+  background-color: $account-page-header !important;
+  background: $account-page-header !important;
+  border: none !important;
+  border-bottom: none !important;
+  border-bottom-width: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+// --- Mantine Structural Inputs & Controls ---
+.mantine-SegmentedControl-control[data-active="true"] {
+  background-color: $primary-button-bg !important; 
+  border-radius: var(--mantine-radius-sm) !important;
+}
+.mantine-SegmentedControl-label[data-active="true"] {
+  color: $primary-button-text !important;
+}
+
+// --- Comprehensive Button Engine ---
+button.mantine-Button-root,
+button.mantine-UnstyledButton-root.mantine-Button-root,
+.mantine-Button-root[data-variant],
+.mantine-UnstyledButton-root[class*="mantine-Button"] {
+  background: $primary-button-bg !important;
+  background-color: $primary-button-bg !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: $primary-button-text !important;
+
+  &:hover {
+    background: $primary-button-bg-hover !important;
+    background-color: $primary-button-bg-hover !important;
+  }
+
+  &[aria-pressed="false"] {
+    background: #fff !important; 
+    background-color: #fff !important; 
+    color: $toggle-button-notpressed-text-resting !important;
+    
+    &:not([data-disabled]):hover {
+      background: $toggle-button-notpressed-bg-hover !important; 
+      background-color: $toggle-button-notpressed-bg-hover !important; 
+      color: #fff !important; 
+    }
+  }
+}
+
+// --- Tabular Data & Typography Weights ---
+span.tabular-nums.shrink-0[class*="text-destructive"] {
+  font-weight: 700 !important;
+  color: var(--destructive) !important; // Your 35% contrast crimson red
+}
+span.tabular-nums.shrink-0[class*="text-sidebar-foreground/60"] {
+  font-weight: 700 !important;
+  color: color-mix(in oklab, var(--sidebar-foreground) 75%, transparent) !important;
+}
+span.tabular-nums[class*="text-[12.5px]"][class*="text-sidebar-foreground/55"], 
+span.tabular-nums[class*="text-[12.5px]"][class*="text-destructive"] {
+  font-weight: 700 !important;
+}
+
+div.flex.justify-end.text-muted-foreground {
+  font-weight: 700 !important;
+}
+
+
+
+// --- Text Sizing Adjustments ---
+div[class*="md:text-[9px]"], div[class*="text-[10.5px]"], 
+span[class*="md:text-[9px]"], span[class*="text-[10.5px]"] {
+  font-size: 12px !important;
+}
+
+.text-xs.tabular-nums {
+  font-size: 14px !important;
+  font-weight: 500 !important; 
+}
+
+#{$budget-header-btn} {
+  font-size: 13px !important;
+  height: 32px !important;
+
+  span.text-left { font-size: inherit !important; }
+  span.tabular-nums { font-size: 15px !important; }
+  svg { transform: scale(1.0) !important; }
+}
+
+// --- Sidebar Overrides ---
+#{$sidebar-inner} {
+  background-color: $sidebar-bg !important;
+  border-color: transparent !important;
+}
+
+#{$sidebar-button} {
+  &:hover, &[data-active="true"], &.active {
+    background-color: $primary-button-bg-hover !important;
+  }
+}
+
+#{$nav-link} {
+  &:hover, &[data-active="true"], &.active {
+    background-color: $primary-button-bg-hover !important;
+  }
+}
+
+div[class*="text-sidebar-foreground/55"],
+div[class*="text-sidebar-foreground/50"],
+div[class*="text-sidebar-foreground/45"],
+div[class*="text-sidebar-foreground/40"],
+span[class*="text-sidebar-foreground/55"],
+span[class*="text-sidebar-foreground/50"],
+span[class*="text-sidebar-foreground/45"],
+span[class*="text-sidebar-foreground/40"] {
+  color: color-mix(in oklab, var(--sidebar-foreground) 75%, transparent) !important;
+}
+
+#{$sidebar-accent} {
+  &:hover, &[data-expanded="true"] {
+    background-color: $primary-button-bg-hover !important;
+  }
+}
+
+// ==========================================
+// 4. DATA TABLE LAYER MATRIX (Surgically Repaired)
+// ==========================================
+
+// Global container layout handles
+div[data-testid="virtuoso-item-list"] {
+  background-color: transparent !important; 
+}
+
+// Forces the underlying scroll canvas runway to match your primary background color
+div[data-budget-scroll-container=""],
+div[data-budget-scroll-container] {
+  background-color: $page-background !important; 
+  background: $page-background !important;
+}
+
+// --- Dynamic Virtual Row Outer Shell Controller ---
+div[data-index][data-item-index] {
+  // Default: Let it stay your light primary background color to handle the budget block gaps
+  background-color: $page-background !important; 
+
+  // CRITICAL FIX: If this specific layout shell houses an account ledger row, 
+  // immediately match its backdrop to your solid dark 1970 table color!
+  &:has([data-virtual-item-key]) {
+    background-color: $table-bg !important;
+  }
+}
+
+// Controls the actual color inside the rounded category card blocks
+div[class*="bg-table-bg"] {
+  background-color: $table-bg !important;
+  background: $table-bg !important;
+}
+
+// ─── FIXED CATEGORY HEADER (Hue 54) ───
+div[role="table"][aria-label="Budget categories"] div[role="row"][class*="sticky"][class*="top-0"] {
+  background-color: $category-header-bg !important;
+  background: $category-header-bg !important;
+
+  div[role="columnheader"], span, button {
+    color: $category-header-text !important;
+  }
+}
+
+// Guarantees your Category Group Headers keep their distinct deep tint and text color
+#{$budget-group-row} {
+  &, * { color: $group-header-text !important; }
+  background-color: $group-header-bg !important;
+  background: $group-header-bg !important;
+  &:hover {
+    background-color: $group-header-bg-hover !important;
+    background: $group-header-bg-hover !important;
+  }
+  &.sticky {
+    &, * { color: color-mix(in oklab, var(--sidebar-foreground) 62%, transparent) !important; }
+  }
+}
+
+// Restores your original 1970 terracotta matrix wash onto all standard data table rows
+#{$table-row} {
+  &:not(.bg-budget-group):not([class*="bg-budget-group"]) {
+    background-color: color-mix(in srgb, $table-bg 50%, transparent) !important;
+
+    &.cursor-pointer:hover {
+      background-color: $table-hover !important;
+    }
+
+    &:has([data-checked="true"]),
+    &:has([class*="checked"]),
+    &[data-checked="true"] {
+      background-color: $table-selected !important;
+      background-image: none !important;
+
+      &:hover {
+        background-color: $table-selected-hover !important;
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+// --- Scheduled transactions Layout Block ---
+div[class*="hidden"][class*="md:block"].shrink-0.overflow-hidden {
+  background-color: $scheduled-bg !important;
+
+  div[role="row"]:not(:has([data-checked="true"])) {
+    background-color: $schedule-resting !important;     // scheduled, resting
+
+    &:hover {
+      background-image: linear-gradient($schedule-hover, $schedule-hover) !important;  // scheduled, hover
+    }
+  }
+}
+
+// --- Scheduled Forecast rows ---
+div.border-dashed.cursor-pointer.select-none {
+  background-color: $forecast-resting !important;
+}
+div.border-dashed.cursor-pointer.select-none:hover {
+  background-color: $forecast-hover !important;
+}
+
+// --- Right Sidebar Transaction Card List (framed like the scheduled panel) ---
+.mantine-ScrollArea-root:has(> .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 button[data-testid="transaction-card-activator"]) {
+  > .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 {
+    background-color: #fff !important;
+    border: 1px solid var(--surface-border, var(--border)) !important;
+    border-radius: var(--radius-lg, 0.5rem) !important;
+    box-shadow: var(--shadow-card, 0 1px 2px rgba(0, 0, 0, 0.06)) !important;
+    padding: 0.75rem !important;
+    overflow: hidden !important;
+
+    // Remove the gaps between cards; the cards' own bottom borders divide them
+    > * {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+// --- Right Sidebar Transaction Card Row Hover Accent ---
+div[class*="flex"][class*="cursor-pointer"]:has(button[data-testid="transaction-card-activator"]) {
+  background-color: $table-bg !important;
+  transition: background-color 0.15s ease !important;
+
+  &:hover {
+    background-color: $transaction-card-hover !important;
+    outline: none !important;
+    border-color: transparent !important;
+  }
+}
+
+// ==========================================
+// 6. DYNAMIC OVER-BUDGET HEADER ACCENT
+// ==========================================
+
+// 1. Red Over-Budget State (Destructive Strong)
+div[class*="bg-destructive-strong"] {
+  background-color: hsl(0, 76%, 90%) !important;
+  background: hsl(0, 76%, 90%) !important;
+  border-color: hsl(230, 10%, 89%) !important;
+  border-width: 1px !important;
+
+  p, h1, div:not([class*="mantine-RollingNumber"]), svg {
+    color: var(--destructive) !important;
+  }
+
+  .mantine-RollingNumber-root {
+    span[class*="copyValue"], 
+    .mantine-RollingNumber-copyValue {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      height: 0px !important;
+      width: 0px !important;
+    }
+    span, 
+    .mantine-RollingNumber-char,
+    .mantine-RollingNumber-digitColumn span {
+      color: var(--destructive) !important;
+    }
+  }
+
+  span[class*="bg-white"] {
+    background-color: color-mix(in srgb, var(--destructive) 12%, transparent) !important;
+    background: color-mix(in srgb, var(--destructive) 12%, transparent) !important;
+    color: var(--destructive) !important;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--destructive) 22%, transparent) !important;
+    }
+  }
+}
+
+// 2. Green Under-Budget / Available State
+div[class*="bg-positive-strong"] {
+  background-color: hsl(0, 0%, 100%) !important;
+  background: hsl(95, 36%, 85%) !important;
+  border-color: hsl(230, 10%, 89%) !important;
+  border-width: 1px !important;
+
+  p, h1, div:not([class*="mantine-RollingNumber"]), svg {
+    color: var(--positive, var(--chart-positive)) !important;
+  }
+
+  .mantine-RollingNumber-root {
+    span[class*="copyValue"], 
+    .mantine-RollingNumber-copyValue {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      height: 0px !important;
+      width: 0px !important;
+    }
+    span, 
+    .mantine-RollingNumber-char,
+    .mantine-RollingNumber-digitColumn span {
+      color: hsl(95, 76%, 33%) !important;
+    }
+  }
+
+  span[class*="bg-white"] {
+    background-color: color-mix(in srgb, hsl(95, 36%, 83%) 12%, transparent) !important;
+    background: color-mix(in srgb, var(--positive, var(--chart-positive)) 12%, transparent) !important;
+    color: hsl(95, 76%, 33%) !important;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--positive, var(--chart-positive)) 22%, transparent) !important;
+    }
+  }
+}
+
+// ==========================================
+// 7. ACCOUNT LEDGER OUTFLOW RESTORATION
+// ==========================================
+
+// Targets the outflow cell wrapper column explicitly inside the ledger rows
+div[data-edit-field="outflow"] {
+  // Force the entire cell, dynamic rolling tracks, and punctuation strings to your crimson destructive ink
+  &, 
+  span,
+  [class*="mantine-RollingNumber"],
+  .mantine-RollingNumber-char,
+  .mantine-RollingNumber-digitColumn span {
+    color: var(--destructive) !important;
+  }
+}
+
+// ==========================================
+// 8. NESTED SPLIT OUTFLOW RESTORATION (Scale Adjusted)
+// ==========================================
+
+div[class*="grid"][class*="text-muted-foreground"] {
+
+  // Targets the text cell directly using our bulletproof sibling layout signature
+  div[class*="justify-end"][class*="text-foreground"]:has(+ div[class*="justify-end"][class*="text-icon-muted"]) {
+    color: var(--destructive) !important;
+    
+    // RESTORED: Reset raw font parameters back to original size so the rolling track alignment doesn't break
+    font-size: inherit !important;
+    
+    // SCALED: Uses a uniform transform scale to neatly shrink the entire numeric component box down by 10%
+    transform: scale(0.90) !important;
+    transform-origin: right center !important; // Keeps the numbers locked tight to the right side of the cell column
+  }
+}
+
+// ==========================================
+// 9. BUDGET TABLE AVAILABLE PILL BORDER STRIP
+// ==========================================
+
+// Targets the explicit badge block containers running down the accounting columns
+span[class*="inline-flex"][class*="tabular-nums"] {
+  
+  // Wipes out all active wrapper boundaries, outlines, and border lines dynamically
+  &, 
+  &::before, 
+  &::after {
+    border: none !important;
+    border-color: transparent !important;
+    border-width: 0px !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// ==========================================
+// 10. SIDEBAR PANEL ACCOUNT & TOTALS ENGINE
+// ==========================================
+
+// 1. Account rows only: the <a> sidebar menu buttons
+div[id*="-side"] a[data-slot="sidebar-menu-button"] span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"],
+div[data-testid*="-side"] a[data-slot="sidebar-menu-button"] span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"] {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: color-mix(in oklab, var(--sidebar-foreground) 85%, transparent) !important;
+}
+
+// 2. Group totals (e.g. 32,920.19): no slash in the selector
+button[class*="type-header"] > span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"] {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--positive, var(--chart-positive)) !important;
+}
+
+// 3. Negative group totals
+button[class*="type-header"] > span[class*="tabular-nums"][class*="text-destructive"] {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--destructive) !important;
+}
+
+@media (hover: hover) {
+  ul[aria-label="Favorite categories"] {
+    > li {
+      transition: background-color 150ms;
+      &:hover {
+        background-color: $transaction-card-hover;
+      }
+    }
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
+// ==========================================
+// 11. CALENDAR GRID
+// ==========================================
+
+/* Weekend day cells */
+.grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
+  background-color: $calendar-weekend !important;
+}
+/* Keep a hover effect on weekends */
+.grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground):hover {
+  background-color: $calendar-weekend-hover !important;
+}
+
+/* Selected day: lighter tint, the ring still marks it */
+.grid.grid-cols-7 > button.ring-2.ring-inset {
+  background-color: $calendar-selected !important;
+}
+
+/* Weekday hover: darker than the selected tint */
+.grid.grid-cols-7 > button.bg-card:hover {
+  background-color: $calendar-weekday-hover !important;
+}
+
+/* Optional: give the selected cell a hover response too */
+.grid.grid-cols-7 > button.ring-2.ring-inset:hover {
+  background-color: $calendar-selected-hover !important;
+}
