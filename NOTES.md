@@ -33,7 +33,24 @@
 `npm run build` regenerates `dist/` and compiles each file. The GitHub workflow
 runs the same build on every change and commits `dist/` if it changed.
 
-## Editing the rules or a theme
+## Working with an agent
+
+1. Start a Cursor chat on this repo. Describe the change and paste the HTML of
+   the element (in the browser: right-click it, Inspect, then right-click the
+   element in DevTools and choose Copy > Copy outerHTML). Say which state it is
+   in (hover, selected, pressed) if that matters.
+2. The agent edits `rules.scss` and/or the themes, bumps `$css-version`,
+   rebuilds `dist/`, and opens a pull request. The description says which file
+   to paste and the new version.
+3. Review the pull request on GitHub and click Merge.
+4. Copy `dist/<theme>.scss` from GitHub (open the file, then the Copy raw file
+   button) and paste it into Magic CSS. The version is already bumped; check
+   that the badge shows it.
+
+If it doesn't look right, reply in the same chat with what you see. The agent
+updates the same pull request.
+
+## Editing by hand
 
 1. Edit `rules.scss` or `themes/<name>.scss`.
 2. `npm run bump`
