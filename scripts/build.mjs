@@ -33,6 +33,8 @@ if (!themes.length) errors.push("themes/: no theme files found");
 
 rmSync("dist", { recursive: true, force: true });
 mkdirSync("dist");
+// The Chrome extension reads this list and dist/<name>.css from GitHub.
+const catalog = [];
 
 for (const file of themes) {
   const name = basename(file, ".scss");
@@ -52,12 +54,17 @@ for (const file of themes) {
   writeFileSync(`dist/${name}.scss`, out);
 
   try {
-    sass.compileString(out, { syntax: "scss" });
+    const { css } = sass.compileString(out, { syntax: "scss" });
+    writeFileSync(`dist/${name}.css`, css + "\n");
+    const title = theme.match(/THEME:\s*(.+?)\s+—/);
+    catalog.push({ id: name, name: title ? title[1] : name, version: version[1] });
     console.log(`dist/${name}.scss: OK (CSS ${version[1]})`);
   } catch (err) {
     errors.push(`dist/${name}.scss: does not compile\n${err.message}`);
   }
 }
+
+writeFileSync("dist/themes.json", JSON.stringify(catalog, null, 2) + "\n");
 
 if (errors.length) {
   console.error(errors.join("\n"));
