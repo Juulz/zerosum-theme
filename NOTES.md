@@ -39,7 +39,7 @@ runs the same build on every change and commits `dist/` if it changed.
 ## The Chrome extension
 
 The extension downloads `dist/<theme>.css` from this repo on GitHub and applies
-it to my.zerosum.com, including the installed desktop app (PWA). It keeps the
+it to my.zerosumapp.com, including the installed desktop app (PWA). It keeps the
 last copy it downloaded, so the theme shows instantly and still works offline.
 
 Install it once:
