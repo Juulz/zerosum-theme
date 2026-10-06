@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "10.06.26.1";
+$css-version: "10.06.26.2";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -31,6 +31,9 @@ $budget-group-row:   'div[role="row"].bg-budget-group';
   --destructive:                     #{$destructive} !important;
   --chart-positive:                  #{$chart-positive} !important;
   --positive:                        #{$positive} !important;
+  @if $foreground != null {
+    --foreground:                    #{$foreground} !important;
+  }
 }
 
 // Version badge (after the color definitions so it can use them)
