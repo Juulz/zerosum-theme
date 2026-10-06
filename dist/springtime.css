@@ -412,5 +412,5 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 
 /* Days from other months: translucent overlay on top of whatever background the cell has */
 .grid.grid-cols-7 > button.text-muted-foreground {
-  background-image: linear-gradient(hsla(205, 60%, 50%, 0.12), hsla(205, 60%, 50%, 0.12)) !important;
+  background-image: linear-gradient(hsla(0, 0%, 90%, 0.12), hsla(0, 0%, 90%, 0.12)) !important;
 }
