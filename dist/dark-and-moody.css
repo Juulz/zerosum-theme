@@ -9,7 +9,7 @@
 }
 
 body::after {
-  content: "CSS 10.06.26.5";
+  content: "CSS 10.06.26.5a";
   position: fixed;
   bottom: 4px;
   left: 50px;

@@ -29,7 +29,8 @@ The user describes a change and usually pastes the HTML of the element.
  name to preview in the Chrome extension.
 
 The build workflow may push a "Rebuild dist/" commit to the branch if `dist/`
-was stale; pull before pushing again.
+was stale, or a "Bump $css-version" commit adding a letter if a push changed
+sources without bumping; pull before pushing again.
 
 Bump the version once per pull request revision the user will paste. If you
 push a fix to an open pull request after feedback, bump again.
