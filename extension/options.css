@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f5f2;
+  --card: #ffffff;
+  --text: #2b2724;
+  --muted: #6f6862;
+  --border: #ddd6cf;
+  --accent: #b5603f;
+  --accent-text: #ffffff;
+  --ok: #2f7d32;
+  --error: #b3261e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1f2128;
+    --card: #2a2d36;
+    --text: #d0d3d8;
+    --muted: #9a9ea8;
+    --border: #3d414c;
+    --accent: #c98a6b;
+    --accent-text: #1f2128;
+    --ok: #7bc47f;
+    --error: #f08b80;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 48px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 system-ui, sans-serif;
+}
+
+main {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px 32px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+h1 { margin: 0 0 4px; font-size: 22px; }
+a { color: var(--accent); }
+code { font-size: 13px; }
+
+.intro { margin: 0 0 24px; color: var(--muted); }
+
+label {
+  display: block;
+  margin: 18px 0 6px;
+  font-weight: 600;
+}
+
+select, input {
+  width: 100%;
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+select:focus, input:focus, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.row { display: flex; gap: 8px; }
+.row input { flex: 1; }
+
+button {
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent-text);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button.secondary {
+  color: var(--text);
+  background: transparent;
+  border-color: var(--border);
+}
+
+button:disabled { opacity: 0.6; cursor: default; }
+
+.hint { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+#status { margin: 0; }
+#status.ok { color: var(--ok); }
+#status.error { color: var(--error); }
