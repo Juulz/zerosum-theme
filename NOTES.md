@@ -29,9 +29,38 @@
   themes.
 - `dist/<name>.scss`: generated. One theme plus `rules.scss` in a single file,
   ready to paste. Never edit it by hand.
+- `dist/<name>.css` and `dist/themes.json`: generated. The compiled CSS and the
+  theme list that the Chrome extension downloads.
+- `extension/`: the ZeroSum Themes Chrome extension (see below).
 
 `npm run build` regenerates `dist/` and compiles each file. The GitHub workflow
 runs the same build on every change and commits `dist/` if it changed.
+
+## The Chrome extension
+
+The extension downloads `dist/<theme>.css` from this repo on GitHub and applies
+it to my.zerosum.com, including the installed desktop app (PWA). It keeps the
+last copy it downloaded, so the theme shows instantly and still works offline.
+
+Install it once:
+
+1. Get the `extension` folder: on GitHub, Code > Download ZIP, then unzip.
+2. Open `chrome://extensions`, turn on Developer mode (top right), click Load
+   unpacked, and pick the `extension` folder.
+3. The settings page opens. Pick a theme.
+4. Turn Magic CSS off for ZeroSum so the two don't both apply.
+
+To open the settings later, click the extension's icon in a normal Chrome
+window, or go to `chrome://extensions` > ZeroSum Themes > Details > Extension
+options. Changes apply to open ZeroSum windows right away.
+
+- **Merged changes** show up on the next page load, but GitHub caches files for
+  up to 5 minutes. Check the version badge.
+- **Previewing a pull request:** put its branch name in the Branch box, check the
+  result, then click Use main once it's merged.
+- **Updating the extension itself** (only when `extension/` changes): download
+  and unzip again over the same folder, then click the reload icon on the
+  extension's card in `chrome://extensions`.
 
 ## Working with an agent
 
@@ -42,10 +71,13 @@ runs the same build on every change and commits `dist/` if it changed.
 2. The agent edits `rules.scss` and/or the themes, bumps `$css-version`,
    rebuilds `dist/`, and opens a pull request. The description says which file
    to paste and the new version.
-3. Review the pull request on GitHub and click Merge.
-4. Copy `dist/<theme>.scss` from GitHub (open the file, then the Copy raw file
-   button) and paste it into Magic CSS. The version is already bumped; check
-   that the badge shows it.
+3. Optionally preview it: put the pull request's branch name in the extension's
+   Branch box.
+4. Review the pull request on GitHub and click Merge.
+5. With the extension, reload ZeroSum (switch the Branch box back to `main` if
+   you previewed). With Magic CSS, copy `dist/<theme>.scss` from GitHub (open
+   the file, then the Copy raw file button) and paste it. Either way, check
+   that the badge shows the new version.
 
 If it doesn't look right, reply in the same chat with what you see. The agent
 updates the same pull request.
