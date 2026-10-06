@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "10.06.26.3";
+$css-version: "10.06.26.4";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -525,6 +525,11 @@ button[class*="type-header"] > span[class*="tabular-nums"][class*="text-destruct
 /* Selected day: lighter tint, the ring still marks it */
 .grid.grid-cols-7 > button.ring-2.ring-inset {
   background-color: $calendar-selected !important;
+}
+
+/* Weekday background: same as page background */
+.grid.grid-cols-7 > button.bg-card {
+  background-color: $page-background !important;
 }
 
 /* Weekday hover: darker than the selected tint */
