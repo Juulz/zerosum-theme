@@ -5,6 +5,9 @@
 - Bump `$css-version` (top of `rules.scss`) on every edit with `npm run bump`.
   The badge in the bottom-left corner shows the version that's live. If it
   doesn't update, close and reopen the editor, or reload the page.
+- Edits pushed without a bump (e.g. made on GitHub) get a letter added by the
+  build workflow: `10.06.26.5` becomes `10.06.26.5a`, then `5b`. The next
+  `npm run bump` moves on to `10.06.26.6`.
 - Magic CSS uses an old Sass. Write colors in the comma form,
   `rgba(0, 0, 0, 0.1)`, not `rgb(0 0 0 / 0.1)`. `npm run build` fails on the
   space-separated form.
@@ -83,6 +86,9 @@ If it doesn't look right, reply in the same chat with what you see. The agent
 updates the same pull request.
 
 ## Editing by hand
+
+On GitHub, just edit and commit the file; the workflow adds a version letter
+and rebuilds `dist/` within a minute. Locally:
 
 1. Edit `rules.scss` or `themes/<name>.scss`.
 2. `npm run bump`
