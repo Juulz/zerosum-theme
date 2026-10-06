@@ -9,7 +9,7 @@
 }
 
 body::after {
-  content: "CSS 10.06.26.4";
+  content: "CSS 10.06.26.5";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -409,4 +409,9 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 /* Optional: give the selected cell a hover response too */
 .grid.grid-cols-7 > button.ring-2.ring-inset:hover {
   background-color: hsl(26, 12%, 30%) !important;
+}
+
+/* Days from other months: translucent overlay on top of whatever background the cell has */
+.grid.grid-cols-7 > button.text-muted-foreground {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) !important;
 }

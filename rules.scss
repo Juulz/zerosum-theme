@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "10.06.26.4";
+$css-version: "10.06.26.5";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -540,4 +540,9 @@ button[class*="type-header"] > span[class*="tabular-nums"][class*="text-destruct
 /* Optional: give the selected cell a hover response too */
 .grid.grid-cols-7 > button.ring-2.ring-inset:hover {
   background-color: $calendar-selected-hover !important;
+}
+
+/* Days from other months: translucent overlay on top of whatever background the cell has */
+.grid.grid-cols-7 > button.text-muted-foreground {
+  background-image: linear-gradient($calendar-other-month-overlay, $calendar-other-month-overlay) !important;
 }
