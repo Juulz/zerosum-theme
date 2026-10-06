@@ -106,6 +106,7 @@ button:disabled { opacity: 0.6; cursor: default; }
   border-top: 1px solid var(--border);
 }
 
-#status { margin: 0; }
-#status.ok { color: var(--ok); }
-#status.error { color: var(--error); }
+#status, #windows { margin: 0; }
+#windows { margin-top: 4px; font-size: 13px; color: var(--muted); }
+#status.ok, #windows.ok { color: var(--ok); }
+#status.error, #windows.error { color: var(--error); }

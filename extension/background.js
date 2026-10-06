@@ -38,15 +38,40 @@ async function listThemes(branch) {
   }
 }
 
+const SITE = "https://my.zerosum.com/*";
+
+const injectInto = (tabId) =>
+  chrome.scripting.executeScript({ target: { tabId }, files: ["content.js"] }).catch(() => {});
+
+// Chrome only runs content scripts in pages loaded after install, so already-open
+// ZeroSum windows get the script injected; one that still doesn't answer is injected again.
+async function checkOpenTabs() {
+  const tabs = await chrome.tabs.query({ url: SITE });
+  const replies = await Promise.all(
+    tabs.map(async (tab) => {
+      try {
+        return await chrome.tabs.sendMessage(tab.id, { type: "ping" });
+      } catch {
+        await injectInto(tab.id);
+        return null;
+      }
+    }),
+  );
+  return { ok: true, open: tabs.length, replies: replies.filter(Boolean) };
+}
+
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message.type === "refresh") refresh().then(sendResponse);
   else if (message.type === "themes") listThemes(message.branch).then(sendResponse);
+  else if (message.type === "tabs") checkOpenTabs().then(sendResponse);
   else return false;
   return true;
 });
 
 chrome.action.onClicked.addListener(() => chrome.runtime.openOptionsPage());
 
-chrome.runtime.onInstalled.addListener(({ reason }) => {
+chrome.runtime.onInstalled.addListener(async ({ reason }) => {
+  const tabs = await chrome.tabs.query({ url: SITE });
+  await Promise.all(tabs.map((tab) => injectInto(tab.id)));
   if (reason === "install") chrome.runtime.openOptionsPage();
 });
