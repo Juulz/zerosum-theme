@@ -382,7 +382,7 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 }
 /* Weekend day cells */
 .grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
-  background-color: hsl(0, 0%, 95%) !important;
+  background-color: hsl(0, 0%, 98%) !important;
 }
 
 /* Keep a hover effect on weekends */
