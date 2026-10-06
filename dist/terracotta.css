@@ -382,7 +382,7 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 }
 /* Weekend day cells */
 .grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
-  background-color: hsl(0, 0%, 95%) !important;
+  background-color: hsl(0, 0%, 98%) !important;
 }
 
 /* Keep a hover effect on weekends */
@@ -412,5 +412,5 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 
 /* Days from other months: translucent overlay on top of whatever background the cell has */
 .grid.grid-cols-7 > button.text-muted-foreground {
-  background-image: linear-gradient(hsla(16, 37%, 40%, 0.12), hsla(16, 37%, 40%, 0.12)) !important;
+  background-image: linear-gradient(hsla(0, 0%, 93%, 0.9), hsla(0, 0%, 93%, 0.9)) !important;
 }
