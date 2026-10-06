@@ -67,7 +67,7 @@ $calendar-weekend-hover:                hsl(0,0%,91%);
 $calendar-weekday-hover:                hsl(0,0%,91%);
 $calendar-selected:                     hsl(45, 100%, 93%);
 $calendar-selected-hover:               hsl(45, 75%, 90%);
-$calendar-other-month-overlay:          hsla(0, 0%, 90%, 0.12); // translucent tint over days from other months
+$calendar-other-month-overlay:          hsl(0, 0%, 93%); // translucent tint over days from other months
 
 // --- Money colors (also exported as site CSS variables) ---
 $destructive:                           hsl(0, 100%, 35%);
