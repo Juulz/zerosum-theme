@@ -8,7 +8,7 @@
 }
 
 body::after {
-  content: "CSS 10.06.26.4";
+  content: "CSS 10.06.26.5";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -382,7 +382,7 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 }
 /* Weekend day cells */
 .grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
-  background-color: hsl(0, 0%, 95%) !important;
+  background-color: hsl(0, 0%, 98%) !important;
 }
 
 /* Keep a hover effect on weekends */
@@ -408,4 +408,9 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 /* Optional: give the selected cell a hover response too */
 .grid.grid-cols-7 > button.ring-2.ring-inset:hover {
   background-color: hsl(16, 37%, 90%) !important;
+}
+
+/* Days from other months: translucent overlay on top of whatever background the cell has */
+.grid.grid-cols-7 > button.text-muted-foreground {
+  background-image: linear-gradient(hsla(0, 0%, 93%, 0.9), hsla(0, 0%, 93%, 0.9)) !important;
 }

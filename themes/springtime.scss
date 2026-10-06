@@ -58,11 +58,12 @@ $under-budget-bg:                       hsl(95, 36%, 85%);
 $under-budget-text:                     hsl(95, 76%, 33%);
 
 // --- Calendar ---
-$calendar-weekend:                      hsl(0, 0%, 95%);
+$calendar-weekend:                      hsl(0, 0%, 98%);
 $calendar-weekend-hover:                hsl(0,0%,91%);
 $calendar-weekday-hover:                hsl(0,0%,91%);
 $calendar-selected:                     hsl(45, 100%, 93%);
 $calendar-selected-hover:               hsl(45, 75%, 90%);
+$calendar-other-month-overlay:          hsla(0, 0%, 93%, 0.9); // translucent tint over days from other months
 
 // --- Money colors (also exported as site CSS variables) ---
 $destructive:                           hsl(0, 100%, 35%);
