@@ -25,7 +25,8 @@ The user describes a change and usually pastes the HTML of the element.
    reports. Never edit `dist/` by hand.
 7. Commit the source changes and the rebuilt `dist/`, push, and open a pull
    request. In the description, list what changed in plain language, the
-   new `$css-version`, and which `dist/<theme>.scss` file to paste.
+   new `$css-version`, which `dist/<theme>.scss` file to paste, and the branch
+ name to preview in the Chrome extension.
 
 The build workflow may push a "Rebuild dist/" commit to the branch if `dist/`
 was stale; pull before pushing again.

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ZeroSum Themes</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>ZeroSum Themes</h1>
+    <p class="intro">Themes load from <a href="https://github.com/Juulz/zerosum-theme" target="_blank" rel="noreferrer">Juulz/zerosum-theme</a>. Changes apply to open ZeroSum windows right away.</p>
+
+    <label for="theme">Theme</label>
+    <select id="theme">
+      <option value="">Off (site's own look)</option>
+    </select>
+
+    <label for="branch">Branch</label>
+    <div class="row">
+      <input id="branch" type="text" spellcheck="false" autocomplete="off" placeholder="main">
+      <button id="reset-branch" type="button" class="secondary">Use main</button>
+    </div>
+    <p class="hint">Leave on <code>main</code> for merged themes. To preview a pull request before merging, paste its branch name (e.g. <code>cursor/new-colors-660d</code>).</p>
+
+    <div class="status-row">
+      <p id="status" role="status"></p>
+      <button id="update" type="button">Check for updates</button>
+    </div>
+    <p class="hint">GitHub caches files for up to 5 minutes, so a just-merged change can take that long to appear.</p>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
