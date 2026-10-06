@@ -1,17 +1,17 @@
 {
   "manifest_version": 3,
   "name": "ZeroSum Themes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Applies Juulz's ZeroSum themes from github.com/Juulz/zerosum-theme.",
   "permissions": ["storage", "scripting"],
-  "host_permissions": ["https://raw.githubusercontent.com/*", "https://my.zerosum.com/*"],
+  "host_permissions": ["https://raw.githubusercontent.com/*", "https://my.zerosumapp.com/*"],
   "background": {
     "service_worker": "background.js",
     "type": "module"
   },
   "content_scripts": [
     {
-      "matches": ["https://my.zerosum.com/*"],
+      "matches": ["https://my.zerosumapp.com/*"],
       "js": ["content.js"],
       "run_at": "document_start"
     }

@@ -38,7 +38,7 @@ async function listThemes(branch) {
   }
 }
 
-const SITE = "https://my.zerosum.com/*";
+const SITE = "https://my.zerosumapp.com/*";
 
 const injectInto = (tabId) =>
   chrome.scripting.executeScript({ target: { tabId }, files: ["content.js"] }).catch(() => {});
