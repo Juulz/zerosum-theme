@@ -1,0 +1,70 @@
+// =================================================
+// THEME: Dark & Moody — ZeroSum Custom CSS by Juulz
+// =================================================
+// Colors only. Selectors live in rules.scss; see NOTES.md to make a new theme.
+
+// --- Page & header ---
+$page-background:                       hsl(225, 19%, 33%);
+$account-page-header:                   hsl(225, 19%, 33%);
+$foreground:                            hsl(213, 9%, 81%); // main text color; null keeps the site's
+
+// --- Sidebar ---
+$sidebar-bg:                            hsl(347, 16%, 24%);
+
+// --- Buttons ---
+$primary-button-bg:                     hsl(26, 12%, 26%);
+$primary-button-bg-hover:               hsl(26, 12%, 30%);
+$primary-button-text:                   hsl(213, 9%, 81%);
+$toggle-button-notpressed-bg:           hsl(225, 19%, 37%);
+$toggle-button-notpressed-bg-hover:     hsl(225, 19%, 39%);
+$toggle-button-notpressed-text-resting: hsl(0, 0%, 70%);
+$toggle-button-notpressed-text-hover:   hsl(213, 9%, 91%);
+
+// --- Transaction approve button (left-border highlight) ---
+$transaction-approve-button:            hsl(296, 13%, 75%);
+$transaction-approve-hover:             hsl(296, 13%, 80%);
+$transaction-approve-accent:            hsl(296, 33%, 50%);
+$transaction-approve-text:              #000;
+
+// --- Budget table ---
+$category-header-bg:                    hsl(26, 12%, 38%);
+$category-header-text:                  hsl(213, 9%, 81%);
+$group-header-bg:                       $sidebar-bg;
+$group-header-bg-hover:                 hsl(26, 12%, 30%);
+$group-header-text:                     hsl(213, 9%, 81%);
+$table-bg:                              hsl(225, 19%, 23%);
+$table-hover:                           hsl(26, 12%, 30%);
+$table-selected:                        hsl(105, 13%, 26%);
+$table-selected-hover:                  hsl(105, 13%, 30%);
+
+// --- Scheduled transactions & forecast ---
+$scheduled-bg:                          hsl(105, 13%, 0%);
+$scheduled-header:                      hsl(26, 13%, 20%);
+$scheduled-header-hover:                hsl(26, 13%, 24%);
+$schedule-resting:                      hsl(105, 13%, 26%);
+$schedule-hover:                        hsl(105, 13%, 30%);
+$forecast-resting:                      hsl(105, 13%, 28%);
+$forecast-hover:                        hsl(105, 13%, 32%);
+
+// --- Right sidebar transaction cards ---
+$transaction-list-bg:                   hsl(233, 11%, 14%);
+$transaction-list-shadow:               rgba(0, 0, 0, 0.06);
+$transaction-card-hover:                hsl(26, 12%, 26%);
+
+// --- Over/under-budget banners ---
+$budget-banner-border:                  hsl(225, 19%, 33%);
+$over-budget-bg:                        hsl(0, 16%, 30%);
+$under-budget-bg:                       hsl(180, 18%, 31%);
+$under-budget-text:                     hsl(95, 36%, 85%);
+
+// --- Calendar ---
+$calendar-weekend:                      hsl(224, 18%, 24%);
+$calendar-weekend-hover:                hsl(0,0%,21%);
+$calendar-weekday-hover:                hsl(0,0%,21%);
+$calendar-selected:                     hsl(26, 12%, 26%);
+$calendar-selected-hover:               hsl(26, 12%, 30%);
+
+// --- Money colors (also exported as site CSS variables) ---
+$destructive:                           hsl(15, 70%, 60%);
+$positive:                              hsl(123, 50%, 50%);
+$chart-positive:                        hsl(123, 50%, 50%);
