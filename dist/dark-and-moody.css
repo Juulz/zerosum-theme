@@ -9,7 +9,7 @@
 }
 
 body::after {
-  content: "CSS 10.06.26.5a";
+  content: "CSS 10.06.26.5b";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -17,7 +17,7 @@ body::after {
   padding: 1px 6px;
   font: 12px/1.4 monospace;
   color: hsl(213, 9%, 81%);
-  background: hsl(347, 16%, 24%);
+  background: hsl(26, 12%, 24%);
   border-radius: 3px;
   opacity: 0.6;
   pointer-events: none;
@@ -138,7 +138,7 @@ button[class*="group/type-header"] svg {
 }
 
 [data-slot=sidebar-inner], .bg-sidebar, div.flex.items-center.bg-muted\/50, div[id=budget-table-side] div[class*=bg-panel], div[id=calendar-side] div[class*=bg-panel] {
-  background-color: hsl(347, 16%, 24%) !important;
+  background-color: hsl(26, 12%, 24%) !important;
   border-color: transparent !important;
 }
 
@@ -199,8 +199,8 @@ div[role=row].bg-budget-group, div[role=row].bg-budget-group * {
   color: hsl(213, 9%, 81%) !important;
 }
 div[role=row].bg-budget-group {
-  background-color: hsl(347, 16%, 24%) !important;
-  background: hsl(347, 16%, 24%) !important;
+  background-color: hsl(26, 12%, 24%) !important;
+  background: hsl(26, 12%, 24%) !important;
 }
 div[role=row].bg-budget-group:hover {
   background-color: hsl(26, 12%, 30%) !important;
