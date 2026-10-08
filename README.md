@@ -1,27 +1,24 @@
 # zerosum-theme
 
-Custom CSS themes for ZeroSum by Juulz. Apply them with the ZeroSum Themes
-Chrome extension in [`extension/`](extension), or by pasting a file from
-[`dist/`](dist) into [Magic CSS](https://github.com/webextensions/live-css-editor)
-in SCSS mode.
+Custom CSS themes for ZeroSum by Juulz. 
+Apply them with the ZeroSum Themes Chrome extension in [`extension/`](extension), or by pasting a file from
+[`dist/`](dist) into [Magic CSS](https://github.com/webextensions/live-css-editor) in SCSS mode.
 
 ## The Chrome extension
 
-The extension downloads `dist/<theme>.css` from this repo on GitHub and applies
-it to my.zerosumapp.com, including the installed desktop app (PWA). It keeps the
-last copy it downloaded, so the theme shows instantly and still works offline.
+The extension downloads `dist/<theme>.css` from this repo on GitHub and applies it to my.zerosumapp.com, including the installed desktop app (PWA). 
+It keeps the last copy it downloaded, so the theme shows instantly and still works offline.
 
 ### Install it once:
 
-1. Get the `extension` folder: on GitHub, Code > Download ZIP, then unzip.
-2. Open `chrome://extensions`, turn on Developer mode (top right), click Load
-   unpacked, and pick the `extension` folder.
-3. The settings page opens. Pick a theme.
-4. Turn Magic CSS off for ZeroSum so the two don't both apply.
+1. Get the `extension` folder: on [GitHub](https://github.com/Juulz/zerosum-theme), click on `<> Code`, then Download ZIP, then unzip.
+2. Open `chrome://extensions`, turn on Developer mode (top right), click Load unpacked, and pick the `extension` folder in the extracted files. It should be at `zerosum-theme-main` > `zerosum-theme-main` > `extension` .
+4. The settings page opens. Pick a theme.
+5. Turn Magic CSS and any other Custom CSS extension off for ZeroSum so the two don't both apply.
 
-To open the settings later, click the extension's icon in a normal Chrome
-window and choose Options, or go to `chrome://extensions` > ZeroSum Themes > Details > Extension
-options. Changes apply to open ZeroSum windows right away.
+To open the settings later, click the extension's icon in a normal Chrome window and choose Options, 
+or go to `chrome://extensions` > ZeroSum Themes > Details > Extension options. 
+Changes apply to open ZeroSum windows right away.
 
 - **Merged changes** show up on the next page load, but GitHub caches files for
   up to 5 minutes. Check the version badge.
