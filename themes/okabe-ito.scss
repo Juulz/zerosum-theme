@@ -59,11 +59,11 @@ $under-budget-bg:                       #1d352a;
 $under-budget-text:                     #1affc2;
 
 // --- Calendar ---
-$calendar-weekend:                      #102a43;
-$calendar-weekend-hover:                #243b53;
+$calendar-weekend:                      rgba(0, 0, 0, 0.20);
+$calendar-weekend-hover:                #333333;
 $calendar-weekday-hover:                #333333;
-$calendar-selected:                     #0072b2;
-$calendar-selected-hover:               #005f94;
+$calendar-selected:                     #00304d;
+$calendar-selected-hover:               #243b53;
 $calendar-other-month-overlay:          rgba(0, 0, 0, 0.3); // translucent tint over days from other months
 
 // --- Money colors (also exported as site CSS variables) ---
