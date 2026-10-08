@@ -2,16 +2,21 @@
   {
     "id": "dark-and-moody",
     "name": "Dark & Moody",
-    "version": "10.06.26.5b"
+    "version": "10.08.26.3"
+  },
+  {
+    "id": "okabe-ito",
+    "name": "Okabe-Ito",
+    "version": "10.08.26.3"
   },
   {
     "id": "springtime",
     "name": "Springtime",
-    "version": "10.06.26.5b"
+    "version": "10.08.26.3"
   },
   {
     "id": "terracotta",
     "name": "Terracotta",
-    "version": "10.06.26.5b"
+    "version": "10.08.26.3"
   }
 ]

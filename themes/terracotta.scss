@@ -69,3 +69,25 @@ $calendar-other-month-overlay:          hsla(0, 0%, 93%, 0.9); // translucent ti
 $destructive:                           hsl(0, 100%, 35%);
 $positive:                              hsl(123, 76%, 30%);
 $chart-positive:                        hsl(123, 76%, 33%);
+$chart-negative:                        null; // this and the rest of the file: null keeps the site's
+$positive-strong:                       null;
+$destructive-strong:                    null;
+$mantine-red-filled:                    null;
+
+// --- Chart series (exported as site CSS variables) ---
+$chart-1:                               null;
+$chart-2:                               null;
+$chart-3:                               null;
+$chart-4:                               null;
+$chart-5:                               null;
+$chart-6:                               null;
+$chart-7:                               null;
+$chart-8:                               null;
+$chart-9:                               null;
+
+// --- Status & progress (exported as site CSS variables) ---
+$status-cleared:                        null;
+$status-scheduled:                      null;
+$progress-positive:                     null;
+$progress-negative:                     null;
+$progress-info:                         null;

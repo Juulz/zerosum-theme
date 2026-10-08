@@ -9,7 +9,7 @@
 }
 
 body::after {
-  content: "CSS 10.06.26.5b";
+  content: "CSS 10.08.26.3";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -275,17 +275,14 @@ div[class*=bg-destructive-strong] {
 div[class*=bg-destructive-strong] p, div[class*=bg-destructive-strong] h1, div[class*=bg-destructive-strong] div:not([class*=mantine-RollingNumber]), div[class*=bg-destructive-strong] svg {
   color: var(--destructive) !important;
 }
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root span[class*=copyValue],
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
+div[class*=bg-destructive-strong] .mantine-RollingNumber-root span[class*=copyValue], div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   height: 0px !important;
   width: 0px !important;
 }
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root span,
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char,
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
+div[class*=bg-destructive-strong] .mantine-RollingNumber-root span, div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char, div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
   color: var(--destructive) !important;
 }
 div[class*=bg-destructive-strong] span[class*=bg-white] {
@@ -306,17 +303,14 @@ div[class*=bg-positive-strong] {
 div[class*=bg-positive-strong] p, div[class*=bg-positive-strong] h1, div[class*=bg-positive-strong] div:not([class*=mantine-RollingNumber]), div[class*=bg-positive-strong] svg {
   color: var(--positive, var(--chart-positive)) !important;
 }
-div[class*=bg-positive-strong] .mantine-RollingNumber-root span[class*=copyValue],
-div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
+div[class*=bg-positive-strong] .mantine-RollingNumber-root span[class*=copyValue], div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   height: 0px !important;
   width: 0px !important;
 }
-div[class*=bg-positive-strong] .mantine-RollingNumber-root span,
-div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char,
-div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
+div[class*=bg-positive-strong] .mantine-RollingNumber-root span, div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char, div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
   color: hsl(95, 36%, 85%) !important;
 }
 div[class*=bg-positive-strong] span[class*=bg-white] {
@@ -329,10 +323,8 @@ div[class*=bg-positive-strong] span[class*=bg-white]:hover {
 }
 
 div[data-edit-field=outflow],
-div[data-edit-field=outflow] span,
 div[data-edit-field=outflow] [class*=mantine-RollingNumber],
-div[data-edit-field=outflow] .mantine-RollingNumber-char,
-div[data-edit-field=outflow] .mantine-RollingNumber-digitColumn span {
+div[data-edit-field=outflow] span, div[data-edit-field=outflow] .mantine-RollingNumber-char, div[data-edit-field=outflow] .mantine-RollingNumber-digitColumn span {
   color: var(--destructive) !important;
 }
 

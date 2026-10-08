@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "10.06.26.5b";
+$css-version: "10.08.26.3";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -19,10 +19,30 @@ $sidebar-accent:     '.hover\\:bg-sidebar-accent, .hover\\:bg-sidebar-accent\\/4
 
 $table-row:          'div[role="row"], div[data-budget-category-id], [class*="virtuoso-item-list"] > div, .mantine-Table-tr';
 $budget-group-row:   'div[role="row"].bg-budget-group';
+$type-header-total:  'button[class*="type-header"] > span[class*="tabular-nums"]';
+$forecast-row:       'div.border-dashed.cursor-pointer.select-none';
+
+$transaction-card-activator: 'button[data-testid="transaction-card-activator"]';
+// Path from a .mantine-ScrollArea-root down to the right sidebar's card list
+$transaction-card-list:      '> .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2';
+
+// Mantine RollingNumber parts inside the over/under-budget banners and ledger cells
+$rolling-number-copy:   'span[class*="copyValue"], .mantine-RollingNumber-copyValue';
+$rolling-number-digits: 'span, .mantine-RollingNumber-char, .mantine-RollingNumber-digitColumn span';
+$banner-pill:           'span[class*="bg-white"]';
+
+$calendar-day:       '.grid.grid-cols-7 > button';
 
 // ==========================================
 // 2. SITE CSS VARIABLES
 // ==========================================
+
+// Sets --$name only when the theme gives a value; null keeps the site's.
+@mixin site-var($name, $value) {
+  @if $value != null {
+    --#{$name}: #{$value} !important;
+  }
+}
 
 :root {
   --mantine-color-brand-light-hover: #{$primary-button-bg-hover} !important;
@@ -34,6 +54,24 @@ $budget-group-row:   'div[role="row"].bg-budget-group';
   @if $foreground != null {
     --foreground:                    #{$foreground} !important;
   }
+  @include site-var(chart-negative,           $chart-negative);
+  @include site-var(positive-strong,          $positive-strong);
+  @include site-var(destructive-strong,       $destructive-strong);
+  @include site-var(mantine-color-red-filled, $mantine-red-filled);
+  @include site-var(status-cleared,           $status-cleared);
+  @include site-var(status-scheduled,         $status-scheduled);
+  @include site-var(progress-positive,        $progress-positive);
+  @include site-var(progress-negative,        $progress-negative);
+  @include site-var(progress-info,            $progress-info);
+  @include site-var(chart-1,                  $chart-1);
+  @include site-var(chart-2,                  $chart-2);
+  @include site-var(chart-3,                  $chart-3);
+  @include site-var(chart-4,                  $chart-4);
+  @include site-var(chart-5,                  $chart-5);
+  @include site-var(chart-6,                  $chart-6);
+  @include site-var(chart-7,                  $chart-7);
+  @include site-var(chart-8,                  $chart-8);
+  @include site-var(chart-9,                  $chart-9);
 }
 
 // Version badge (after the color definitions so it can use them)
@@ -298,16 +336,16 @@ div[class*="hidden"][class*="md:block"].shrink-0.overflow-hidden {
 }
 
 // --- Scheduled Forecast rows ---
-div.border-dashed.cursor-pointer.select-none {
+#{$forecast-row} {
   background-color: $forecast-resting !important;
 }
-div.border-dashed.cursor-pointer.select-none:hover {
+#{$forecast-row}:hover {
   background-color: $forecast-hover !important;
 }
 
 // --- Right Sidebar Transaction Card List (framed like the scheduled panel) ---
-.mantine-ScrollArea-root:has(> .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 button[data-testid="transaction-card-activator"]) {
-  > .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 {
+.mantine-ScrollArea-root:has(#{$transaction-card-list} #{$transaction-card-activator}) {
+  #{$transaction-card-list} {
     background-color: $transaction-list-bg !important;
     border: 1px solid var(--surface-border, var(--border)) !important;
     border-radius: var(--radius-lg, 0.5rem) !important;
@@ -324,7 +362,7 @@ div.border-dashed.cursor-pointer.select-none:hover {
 }
 
 // --- Right Sidebar Transaction Card Row Hover Accent ---
-div[class*="flex"][class*="cursor-pointer"]:has(button[data-testid="transaction-card-activator"]) {
+div[class*="flex"][class*="cursor-pointer"]:has(#{$transaction-card-activator}) {
   background-color: $table-bg !important;
   transition: background-color 0.15s ease !important;
 
@@ -351,22 +389,19 @@ div[class*="bg-destructive-strong"] {
   }
 
   .mantine-RollingNumber-root {
-    span[class*="copyValue"], 
-    .mantine-RollingNumber-copyValue {
+    #{$rolling-number-copy} {
       display: none !important;
       opacity: 0 !important;
       visibility: hidden !important;
       height: 0px !important;
       width: 0px !important;
     }
-    span, 
-    .mantine-RollingNumber-char,
-    .mantine-RollingNumber-digitColumn span {
+    #{$rolling-number-digits} {
       color: var(--destructive) !important;
     }
   }
 
-  span[class*="bg-white"] {
+  #{$banner-pill} {
     background-color: color-mix(in srgb, var(--destructive) 12%, transparent) !important;
     background: color-mix(in srgb, var(--destructive) 12%, transparent) !important;
     color: var(--destructive) !important;
@@ -389,22 +424,19 @@ div[class*="bg-positive-strong"] {
   }
 
   .mantine-RollingNumber-root {
-    span[class*="copyValue"], 
-    .mantine-RollingNumber-copyValue {
+    #{$rolling-number-copy} {
       display: none !important;
       opacity: 0 !important;
       visibility: hidden !important;
       height: 0px !important;
       width: 0px !important;
     }
-    span, 
-    .mantine-RollingNumber-char,
-    .mantine-RollingNumber-digitColumn span {
+    #{$rolling-number-digits} {
       color: $under-budget-text !important;
     }
   }
 
-  span[class*="bg-white"] {
+  #{$banner-pill} {
     background-color: color-mix(in srgb, var(--positive, var(--chart-positive)) 12%, transparent) !important;
     background: color-mix(in srgb, var(--positive, var(--chart-positive)) 12%, transparent) !important;
     color: $under-budget-text !important;
@@ -423,10 +455,8 @@ div[class*="bg-positive-strong"] {
 div[data-edit-field="outflow"] {
   // Force the entire cell, dynamic rolling tracks, and punctuation strings to your crimson destructive ink
   &, 
-  span,
   [class*="mantine-RollingNumber"],
-  .mantine-RollingNumber-char,
-  .mantine-RollingNumber-digitColumn span {
+  #{$rolling-number-digits} {
     color: var(--destructive) !important;
   }
 }
@@ -474,22 +504,22 @@ span[class*="inline-flex"][class*="tabular-nums"] {
 // ==========================================
 
 // 1. Account rows only: the <a> sidebar menu buttons
-div[id*="-side"] a[data-slot="sidebar-menu-button"] span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"],
-div[data-testid*="-side"] a[data-slot="sidebar-menu-button"] span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"] {
+div[id*="-side"] a#{$sidebar-button} span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"],
+div[data-testid*="-side"] a#{$sidebar-button} span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"] {
   font-size: 13.5px !important;
   font-weight: 600 !important;
   color: color-mix(in oklab, var(--sidebar-foreground) 85%, transparent) !important;
 }
 
 // 2. Group totals (e.g. 32,920.19): no slash in the selector
-button[class*="type-header"] > span[class*="tabular-nums"][class*="text-sidebar-muted-foreground"] {
+#{$type-header-total}[class*="text-sidebar-muted-foreground"] {
   font-size: 15px !important;
   font-weight: 600 !important;
   color: var(--positive, var(--chart-positive)) !important;
 }
 
 // 3. Negative group totals
-button[class*="type-header"] > span[class*="tabular-nums"][class*="text-destructive"] {
+#{$type-header-total}[class*="text-destructive"] {
   font-size: 15px !important;
   font-weight: 600 !important;
   color: var(--destructive) !important;
@@ -514,35 +544,35 @@ button[class*="type-header"] > span[class*="tabular-nums"][class*="text-destruct
 // ==========================================
 
 /* Weekend day cells */
-.grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
+#{$calendar-day}.bg-muted\/40:not(.text-muted-foreground) {
   background-color: $calendar-weekend !important;
 }
 /* Keep a hover effect on weekends */
-.grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground):hover {
+#{$calendar-day}.bg-muted\/40:not(.text-muted-foreground):hover {
   background-color: $calendar-weekend-hover !important;
 }
 
 /* Selected day: lighter tint, the ring still marks it */
-.grid.grid-cols-7 > button.ring-2.ring-inset {
+#{$calendar-day}.ring-2.ring-inset {
   background-color: $calendar-selected !important;
 }
 
 /* Weekday background: same as page background */
-.grid.grid-cols-7 > button.bg-card {
+#{$calendar-day}.bg-card {
   background-color: $page-background !important;
 }
 
 /* Weekday hover: darker than the selected tint */
-.grid.grid-cols-7 > button.bg-card:hover {
+#{$calendar-day}.bg-card:hover {
   background-color: $calendar-weekday-hover !important;
 }
 
 /* Optional: give the selected cell a hover response too */
-.grid.grid-cols-7 > button.ring-2.ring-inset:hover {
+#{$calendar-day}.ring-2.ring-inset:hover {
   background-color: $calendar-selected-hover !important;
 }
 
 /* Days from other months: translucent overlay on top of whatever background the cell has */
-.grid.grid-cols-7 > button.text-muted-foreground {
+#{$calendar-day}.text-muted-foreground {
   background-image: linear-gradient($calendar-other-month-overlay, $calendar-other-month-overlay) !important;
 }

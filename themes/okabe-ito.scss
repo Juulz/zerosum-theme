@@ -1,0 +1,94 @@
+// =================================================
+// THEME: Okabe-Ito — ZeroSum Custom CSS by Juulz
+// =================================================
+// Colors only. Selectors live in rules.scss; see NOTES.md to make a new theme.
+// Dark, color-blind friendly palette ported from https://github.com/Juulz/okabe-ito
+
+// --- Page & header ---
+$page-background:                       #222222;
+$account-page-header:                   #222222;
+$foreground:                            #d9e2ec; // main text color; null keeps the site's
+
+// --- Sidebar ---
+$sidebar-bg:                            #00304d;
+
+// --- Buttons ---
+$primary-button-bg:                     #0072b2;
+$primary-button-bg-hover:               #005f94;
+$primary-button-text:                   #ffffff;
+$toggle-button-notpressed-bg:           #333333;
+$toggle-button-notpressed-bg-hover:     #434343;
+$toggle-button-notpressed-text-resting: #919ea4;
+$toggle-button-notpressed-text-hover:   #e8ecf0;
+
+// --- Transaction approve button (left-border highlight) ---
+$transaction-approve-button:            #f0e442;
+$transaction-approve-hover:             #f5ec74;
+$transaction-approve-accent:            #e69f00;
+$transaction-approve-text:              #000000;
+
+// --- Budget table ---
+$category-header-bg:                    #243b53;
+$category-header-text:                  #bbe1f6;
+$group-header-bg:                       #434343;
+$group-header-bg-hover:                 #4d4d4d;
+$group-header-text:                     #d9e2ec;
+$table-bg:                              #333333;
+$table-hover:                           #404040;
+$table-selected:                        #43382d;
+$table-selected-hover:                  #4f4235;
+
+// --- Scheduled transactions & forecast ---
+$scheduled-bg:                          #141520;
+$scheduled-header:                      #243b53;
+$scheduled-header-hover:                #2c4866;
+$schedule-resting:                      #070d14;
+$schedule-hover:                        #0d1926;
+$forecast-resting:                      #0d1926;
+$forecast-hover:                        #142539;
+
+// --- Right sidebar transaction cards ---
+$transaction-list-bg:                   #141520;
+$transaction-list-shadow:               rgba(0, 0, 0, 0.3);
+$transaction-card-hover:                #243b53;
+
+// --- Over/under-budget banners ---
+$budget-banner-border:                  #222222;
+$over-budget-bg:                        #392a2a;
+$under-budget-bg:                       #1d352a;
+$under-budget-text:                     #1affc2;
+
+// --- Calendar ---
+$calendar-weekend:                      rgba(0, 0, 0, 0.20);
+$calendar-weekend-hover:                #333333;
+$calendar-weekday-hover:                #333333;
+$calendar-selected:                     #00304d;
+$calendar-selected-hover:               #243b53;
+$calendar-other-month-overlay:          rgba(0, 0, 0, 0.3); // translucent tint over days from other months
+
+// --- Money colors (also exported as site CSS variables) ---
+$destructive:                           #ff6f00;
+$positive:                              #1affc2;
+$chart-positive:                        #1affc2;
+$chart-negative:                        $destructive; // this and the rest of the file: null keeps the site's
+$positive-strong:                       #00805e;
+$destructive-strong:                    #b34d00;
+$mantine-red-filled:                    $destructive-strong;
+
+// --- Chart series (exported as site CSS variables) ---
+$chart-1:                               #eeb910;
+$chart-2:                               #ff4195;
+$chart-3:                               #3bd3d4;
+$chart-4:                               #476300;
+$chart-5:                               #99beff;
+$chart-6:                               #bd512a;
+$chart-7:                               #002e8b;
+$chart-8:                               #ff8036;
+$chart-9:                               #a300c3;
+
+// --- Status & progress (exported as site CSS variables) ---
+$status-cleared:                        $positive;
+$status-scheduled:                      #4dbeff;
+$progress-positive:                     #29c99f;
+$progress-negative:                     $destructive;
+$progress-info:                         #4dbeff;
