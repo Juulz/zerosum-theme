@@ -6,10 +6,28 @@
   --chart-positive: #1affc2 !important;
   --positive: #1affc2 !important;
   --foreground: #d9e2ec !important;
+  --chart-negative: #ff6f00 !important;
+  --positive-strong: #00805e !important;
+  --destructive-strong: #b34d00 !important;
+  --mantine-color-red-filled: #ff6f00 !important;
+  --status-cleared: #1affc2 !important;
+  --status-scheduled: #005f94 !important;
+  --progress-positive: #1affc2 !important;
+  --progress-negative: #ff6f00 !important;
+  --progress-info: #005f94 !important;
+  --chart-1: #eeb910 !important;
+  --chart-2: #ff4195 !important;
+  --chart-3: #3bd3d4 !important;
+  --chart-4: #476300 !important;
+  --chart-5: #99beff !important;
+  --chart-6: #bd512a !important;
+  --chart-7: #002e8b !important;
+  --chart-8: #ff8036 !important;
+  --chart-9: #a300c3 !important;
 }
 
 body::after {
-  content: "CSS 10.08.26.1";
+  content: "CSS 10.08.26.2";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -383,17 +401,17 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 }
 /* Weekend day cells */
 .grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
-  background-color: #102a43 !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Keep a hover effect on weekends */
 .grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground):hover {
-  background-color: #243b53 !important;
+  background-color: #333333 !important;
 }
 
 /* Selected day: lighter tint, the ring still marks it */
 .grid.grid-cols-7 > button.ring-2.ring-inset {
-  background-color: #0072b2 !important;
+  background-color: #00304d !important;
 }
 
 /* Weekday background: same as page background */
@@ -408,7 +426,7 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 
 /* Optional: give the selected cell a hover response too */
 .grid.grid-cols-7 > button.ring-2.ring-inset:hover {
-  background-color: #005f94 !important;
+  background-color: #243b53 !important;
 }
 
 /* Days from other months: translucent overlay on top of whatever background the cell has */

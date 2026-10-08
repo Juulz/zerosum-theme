@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "10.08.26.1";
+$css-version: "10.08.26.2";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -24,6 +24,13 @@ $budget-group-row:   'div[role="row"].bg-budget-group';
 // 2. SITE CSS VARIABLES
 // ==========================================
 
+// Sets --$name only when the theme gives a value; null keeps the site's.
+@mixin site-var($name, $value) {
+  @if $value != null {
+    --#{$name}: #{$value} !important;
+  }
+}
+
 :root {
   --mantine-color-brand-light-hover: #{$primary-button-bg-hover} !important;
   --mantine-color-brand-light:       #{$primary-button-bg} !important;
@@ -34,6 +41,24 @@ $budget-group-row:   'div[role="row"].bg-budget-group';
   @if $foreground != null {
     --foreground:                    #{$foreground} !important;
   }
+  @include site-var(chart-negative,           $chart-negative);
+  @include site-var(positive-strong,          $positive-strong);
+  @include site-var(destructive-strong,       $destructive-strong);
+  @include site-var(mantine-color-red-filled, $mantine-red-filled);
+  @include site-var(status-cleared,           $status-cleared);
+  @include site-var(status-scheduled,         $status-scheduled);
+  @include site-var(progress-positive,        $progress-positive);
+  @include site-var(progress-negative,        $progress-negative);
+  @include site-var(progress-info,            $progress-info);
+  @include site-var(chart-1,                  $chart-1);
+  @include site-var(chart-2,                  $chart-2);
+  @include site-var(chart-3,                  $chart-3);
+  @include site-var(chart-4,                  $chart-4);
+  @include site-var(chart-5,                  $chart-5);
+  @include site-var(chart-6,                  $chart-6);
+  @include site-var(chart-7,                  $chart-7);
+  @include site-var(chart-8,                  $chart-8);
+  @include site-var(chart-9,                  $chart-9);
 }
 
 // Version badge (after the color definitions so it can use them)

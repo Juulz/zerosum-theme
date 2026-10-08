@@ -70,3 +70,25 @@ $calendar-other-month-overlay:          rgba(0, 0, 0, 0.3); // translucent tint 
 $destructive:                           #ff6f00;
 $positive:                              #1affc2;
 $chart-positive:                        #1affc2;
+$chart-negative:                        $destructive; // this and the rest of the file: null keeps the site's
+$positive-strong:                       #00805e;
+$destructive-strong:                    #b34d00;
+$mantine-red-filled:                    $destructive;
+
+// --- Status & progress (exported as site CSS variables) ---
+$status-cleared:                        $positive;
+$status-scheduled:                      $primary-button-bg-hover;
+$progress-positive:                     $positive;
+$progress-negative:                     $destructive;
+$progress-info:                         $primary-button-bg-hover;
+
+// --- Chart series (exported as site CSS variables) ---
+$chart-1:                               #eeb910;
+$chart-2:                               #ff4195;
+$chart-3:                               #3bd3d4;
+$chart-4:                               #476300;
+$chart-5:                               #99beff;
+$chart-6:                               #bd512a;
+$chart-7:                               #002e8b;
+$chart-8:                               #ff8036;
+$chart-9:                               #a300c3;
