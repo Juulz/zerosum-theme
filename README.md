@@ -20,6 +20,8 @@ To open the settings later, click the extension's icon in a normal Chrome window
 or go to `chrome://extensions` > ZeroSum Themes > Details > Extension options. 
 Changes apply to open ZeroSum windows right away.
 
+**NOTE** Themes are either light or dark and the appropriate mode needs to be chosen in Zerosum Appearance. You can choose light or dark after you choose the theme if you like.
+
 - **Merged changes** show up on the next page load, but GitHub caches files for
   up to 5 minutes. Check the version badge.
 - **Previewing a pull request:** put its branch name in the Branch box, check the
