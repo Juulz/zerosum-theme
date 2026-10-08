@@ -74,13 +74,6 @@ $positive-strong:                       null;
 $destructive-strong:                    null;
 $mantine-red-filled:                    null;
 
-// --- Status & progress (exported as site CSS variables) ---
-$status-cleared:                        null;
-$status-scheduled:                      null;
-$progress-positive:                     null;
-$progress-negative:                     null;
-$progress-info:                         null;
-
 // --- Chart series (exported as site CSS variables) ---
 $chart-1:                               null;
 $chart-2:                               null;
@@ -91,3 +84,10 @@ $chart-6:                               null;
 $chart-7:                               null;
 $chart-8:                               null;
 $chart-9:                               null;
+
+// --- Status & progress (exported as site CSS variables) ---
+$status-cleared:                        null;
+$status-scheduled:                      null;
+$progress-positive:                     null;
+$progress-negative:                     null;
+$progress-info:                         null;

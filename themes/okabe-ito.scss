@@ -42,10 +42,10 @@ $table-selected-hover:                  #4f4235;
 $scheduled-bg:                          #141520;
 $scheduled-header:                      #243b53;
 $scheduled-header-hover:                #2c4866;
-$schedule-resting:                      #4b2149;
-$schedule-hover:                        #5e2a5b;
-$forecast-resting:                      #3a1f39;
-$forecast-hover:                        #4b2849;
+$schedule-resting:                      #070d14;
+$schedule-hover:                        #0d1926;
+$forecast-resting:                      #0d1926;
+$forecast-hover:                        #142539;
 
 // --- Right sidebar transaction cards ---
 $transaction-list-bg:                   #141520;
@@ -73,14 +73,7 @@ $chart-positive:                        #1affc2;
 $chart-negative:                        $destructive; // this and the rest of the file: null keeps the site's
 $positive-strong:                       #00805e;
 $destructive-strong:                    #b34d00;
-$mantine-red-filled:                    $destructive;
-
-// --- Status & progress (exported as site CSS variables) ---
-$status-cleared:                        $positive;
-$status-scheduled:                      $primary-button-bg-hover;
-$progress-positive:                     $positive;
-$progress-negative:                     $destructive;
-$progress-info:                         $primary-button-bg-hover;
+$mantine-red-filled:                    $destructive-strong;
 
 // --- Chart series (exported as site CSS variables) ---
 $chart-1:                               #eeb910;
@@ -92,3 +85,10 @@ $chart-6:                               #bd512a;
 $chart-7:                               #002e8b;
 $chart-8:                               #ff8036;
 $chart-9:                               #a300c3;
+
+// --- Status & progress (exported as site CSS variables) ---
+$status-cleared:                        $positive;
+$status-scheduled:                      #4dbeff;
+$progress-positive:                     #29c99f;
+$progress-negative:                     $destructive;
+$progress-info:                         #4dbeff;
