@@ -4,13 +4,15 @@ Custom CSS themes for ZeroSum by Juulz.
 Apply them with the ZeroSum Themes Chrome extension in [`extension/`](extension), or by pasting a file from
 [`dist/`](dist) into [Magic CSS](https://github.com/webextensions/live-css-editor) in SCSS mode.
 
-## Chrome (ONLY)
+## Browser Extension (addon)
 
-No other browser is supported or planned.
+To use a browser other than Chrome, it must have an extension (addon) that supports SCSS. No instructions for use of alternate browsers or their addons is available here or planned.
 
-The extension (see below) will never be published in the Play store and therefore needs to have Developer mode turned on to work. If you don't want to use the extension, install [Magic CSS](https://github.com/webextensions/live-css-editor), navigate to my.zerosumapp.com (or use the Chrome PWA) and paste one of the *.scss [`dist/`](dist) files into Magic's SCSS tab.
+Chrome: Install [Magic CSS](https://github.com/webextensions/live-css-editor), navigate to my.zerosumapp.com (or use the Chrome PWA) and paste one of the *.scss [`dist/`](dist) files into Magic's SCSS tab.
 
 ## Chrome Developer Extension
+
+No other browser is supported or planned.
 
 The extension downloads `dist/<theme>.css` from this repo on GitHub and applies it to my.zerosumapp.com, including the installed desktop app (PWA). 
 It keeps the last copy it downloaded, so the theme shows instantly and still works offline.
