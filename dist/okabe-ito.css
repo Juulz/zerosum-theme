@@ -9,12 +9,12 @@
   --chart-negative: #ff6f00 !important;
   --positive-strong: #00805e !important;
   --destructive-strong: #b34d00 !important;
-  --mantine-color-red-filled: #ff6f00 !important;
+  --mantine-color-red-filled: #b34d00 !important;
   --status-cleared: #1affc2 !important;
-  --status-scheduled: #005f94 !important;
-  --progress-positive: #1affc2 !important;
+  --status-scheduled: #4dbeff !important;
+  --progress-positive: #29c99f !important;
   --progress-negative: #ff6f00 !important;
-  --progress-info: #005f94 !important;
+  --progress-info: #4dbeff !important;
   --chart-1: #eeb910 !important;
   --chart-2: #ff4195 !important;
   --chart-3: #3bd3d4 !important;
@@ -27,7 +27,7 @@
 }
 
 body::after {
-  content: "CSS 10.08.26.2";
+  content: "CSS 10.08.26.3";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -247,18 +247,18 @@ div[class*=hidden][class*="md:block"].shrink-0.overflow-hidden {
   background-color: #141520 !important;
 }
 div[class*=hidden][class*="md:block"].shrink-0.overflow-hidden div[role=row]:not(:has([data-checked=true])) {
-  background-color: #4b2149 !important;
+  background-color: #070d14 !important;
 }
 div[class*=hidden][class*="md:block"].shrink-0.overflow-hidden div[role=row]:not(:has([data-checked=true])):hover {
-  background-image: linear-gradient(#5e2a5b, #5e2a5b) !important;
+  background-image: linear-gradient(#0d1926, #0d1926) !important;
 }
 
 div.border-dashed.cursor-pointer.select-none {
-  background-color: #3a1f39 !important;
+  background-color: #0d1926 !important;
 }
 
 div.border-dashed.cursor-pointer.select-none:hover {
-  background-color: #4b2849 !important;
+  background-color: #142539 !important;
 }
 
 .mantine-ScrollArea-root:has(> .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 button[data-testid=transaction-card-activator]) > .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 {
@@ -293,17 +293,14 @@ div[class*=bg-destructive-strong] {
 div[class*=bg-destructive-strong] p, div[class*=bg-destructive-strong] h1, div[class*=bg-destructive-strong] div:not([class*=mantine-RollingNumber]), div[class*=bg-destructive-strong] svg {
   color: var(--destructive) !important;
 }
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root span[class*=copyValue],
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
+div[class*=bg-destructive-strong] .mantine-RollingNumber-root span[class*=copyValue], div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   height: 0px !important;
   width: 0px !important;
 }
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root span,
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char,
-div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
+div[class*=bg-destructive-strong] .mantine-RollingNumber-root span, div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char, div[class*=bg-destructive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
   color: var(--destructive) !important;
 }
 div[class*=bg-destructive-strong] span[class*=bg-white] {
@@ -324,17 +321,14 @@ div[class*=bg-positive-strong] {
 div[class*=bg-positive-strong] p, div[class*=bg-positive-strong] h1, div[class*=bg-positive-strong] div:not([class*=mantine-RollingNumber]), div[class*=bg-positive-strong] svg {
   color: var(--positive, var(--chart-positive)) !important;
 }
-div[class*=bg-positive-strong] .mantine-RollingNumber-root span[class*=copyValue],
-div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
+div[class*=bg-positive-strong] .mantine-RollingNumber-root span[class*=copyValue], div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-copyValue {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   height: 0px !important;
   width: 0px !important;
 }
-div[class*=bg-positive-strong] .mantine-RollingNumber-root span,
-div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char,
-div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
+div[class*=bg-positive-strong] .mantine-RollingNumber-root span, div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char, div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
   color: #1affc2 !important;
 }
 div[class*=bg-positive-strong] span[class*=bg-white] {
@@ -347,10 +341,8 @@ div[class*=bg-positive-strong] span[class*=bg-white]:hover {
 }
 
 div[data-edit-field=outflow],
-div[data-edit-field=outflow] span,
 div[data-edit-field=outflow] [class*=mantine-RollingNumber],
-div[data-edit-field=outflow] .mantine-RollingNumber-char,
-div[data-edit-field=outflow] .mantine-RollingNumber-digitColumn span {
+div[data-edit-field=outflow] span, div[data-edit-field=outflow] .mantine-RollingNumber-char, div[data-edit-field=outflow] .mantine-RollingNumber-digitColumn span {
   color: var(--destructive) !important;
 }
 
