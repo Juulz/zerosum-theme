@@ -27,7 +27,7 @@
 }
 
 body::after {
-  content: "CSS 10.08.26.3";
+  content: "CSS 10.08.26.3a";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -42,11 +42,11 @@ body::after {
 }
 
 button[class*="border-l-[3px]"][class*="bg-primary/5"], div[class*="border-l-[3px]"][class*="bg-primary/5"] {
-  background-color: #f0e442 !important;
-  border-left-color: #e69f00 !important;
+  background-color: #e4ac81 !important;
+  border-left-color: #ff0066 !important;
 }
 button[class*="border-l-[3px]"][class*="bg-primary/5"]:hover, div[class*="border-l-[3px]"][class*="bg-primary/5"]:hover {
-  background-color: #f5ec74 !important;
+  background-color: #e9ba96 !important;
 }
 button[class*="border-l-[3px]"][class*="bg-primary/5"] span, button[class*="border-l-[3px]"][class*="bg-primary/5"] svg, button[class*="border-l-[3px]"][class*="bg-primary/5"] button, div[class*="border-l-[3px]"][class*="bg-primary/5"] span, div[class*="border-l-[3px]"][class*="bg-primary/5"] svg, div[class*="border-l-[3px]"][class*="bg-primary/5"] button {
   color: #000000 !important;
