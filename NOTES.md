@@ -8,15 +8,25 @@
 - Edits pushed without a bump (e.g. made on GitHub) get a letter added by the
   build workflow: `10.06.26.5` becomes `10.06.26.5a`, then `5b`. The next
   `npm run bump` moves on to `10.06.26.6`.
-- Magic CSS uses an old Sass. Write colors in the comma form,
+- Magic CSS uses an old Sass that behaves like libsass 3.6 (the `sass.js`
+  0.11.1 package). Write colors in the comma form,
   `rgba(0, 0, 0, 0.1)`, not `rgb(0 0 0 / 0.1)`. `npm run build` fails on the
   space-separated form.
 - Don't put an interpolated selector list (e.g. `#{$rolling-number-digits}`) in
   the same nested selector as `&,`. Magic CSS's Sass drops the parent from it,
   so `span` alone ends up styled site-wide. Give it its own nested block.
 - The build checks with current Dart Sass, which accepts more than Magic CSS
-  does. A file that builds can still fail in Magic CSS, so check the badge after
-  pasting.
+  does. A file that builds can still fail in Magic CSS, or compile to different
+  selectors, so check the badge after pasting. To test with Magic CSS's
+  compiler before pasting:
+
+  ```bash
+  npm install --no-save sass.js@0.11.1
+  node -e 'require("sass.js/dist/sass.sync.js").compile(require("fs").readFileSync(process.argv[1], "utf8"), (r) => { if (r.status) { console.error(r.formatted); process.exit(1); } console.log(r.text); })' dist/okabe-ito.scss > /tmp/magic.css
+  ```
+
+  Then compare its selectors with `dist/okabe-ito.css`. Dart Sass drops the
+  quotes in attribute selectors, so ignore that difference.
 
 ## Beating the site's Tailwind styles
 
