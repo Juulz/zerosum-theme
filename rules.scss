@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "10.10.26.1";
+$css-version: "10.10.26.2";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -378,7 +378,8 @@ div[class*="flex"][class*="cursor-pointer"]:has(#{$transaction-card-activator}) 
 // ==========================================
 
 // 1. Red Over-Budget State (Destructive Strong)
-div[class*="bg-destructive-strong"] {
+// Leading space or start of attribute: skips variant classes like has-[...]:bg-destructive-strong on page wrappers
+div[class^="bg-destructive-strong"], div[class*=" bg-destructive-strong"] {
   background-color: $over-budget-bg !important;
   background: $over-budget-bg !important;
   border-color: $budget-banner-border !important;
@@ -413,7 +414,7 @@ div[class*="bg-destructive-strong"] {
 }
 
 // 2. Green Under-Budget / Available State
-div[class*="bg-positive-strong"] {
+div[class^="bg-positive-strong"], div[class*=" bg-positive-strong"] {
   background-color: $under-budget-bg !important;
   background: $under-budget-bg !important;
   border-color: $budget-banner-border !important;
