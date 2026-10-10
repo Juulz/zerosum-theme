@@ -1,10 +1,29 @@
 :root {
-  --mantine-color-brand-light-hover: hsl(205, 60%, 80%) !important;
-  --mantine-color-brand-light: hsl(205, 60%, 85%) !important;
-  --background: hsl(45, 100%, 98%) !important;
-  --destructive: hsl(0, 100%, 35%) !important;
-  --chart-positive: hsl(123, 76%, 33%) !important;
-  --positive: hsl(123, 76%, 30%) !important;
+  --mantine-color-brand-light-hover: #9a7733 !important;
+  --mantine-color-brand-light: #b08a3e !important;
+  --background: #20221b !important;
+  --destructive: #e0584a !important;
+  --chart-positive: #6cc96a !important;
+  --positive: #6cc96a !important;
+  --foreground: #e2e4d3 !important;
+  --chart-negative: #e0584a !important;
+  --positive-strong: #2f7a3a !important;
+  --destructive-strong: #a8352a !important;
+  --mantine-color-red-filled: #a8352a !important;
+  --status-cleared: #6cc96a !important;
+  --status-scheduled: #7fb3c9 !important;
+  --progress-positive: #57b05f !important;
+  --progress-negative: #e0584a !important;
+  --progress-info: #7fb3c9 !important;
+  --chart-1: #d4a73a !important;
+  --chart-2: #c25a7c !important;
+  --chart-3: #5fae9e !important;
+  --chart-4: #7d8f2e !important;
+  --chart-5: #8fa8d0 !important;
+  --chart-6: #b5582f !important;
+  --chart-7: #3a5a8a !important;
+  --chart-8: #e08a4a !important;
+  --chart-9: #8a5a9e !important;
 }
 
 body::after {
@@ -15,34 +34,34 @@ body::after {
   z-index: 99999;
   padding: 1px 6px;
   font: 12px/1.4 monospace;
-  color: hsl(232, 60%, 50%);
-  background: hsl(70, 45%, 85%);
+  color: #e2e4d3;
+  background: #666633;
   border-radius: 3px;
   opacity: 0.6;
   pointer-events: none;
 }
 
 button[class*="border-l-[3px]"][class*="bg-primary/5"], div[class*="border-l-[3px]"][class*="bg-primary/5"] {
-  background-color: hsl(302, 49%, 85%) !important;
-  border-left-color: hsl(302, 49%, 50%) !important;
+  background-color: #d4b77a !important;
+  border-left-color: #a3412b !important;
 }
 button[class*="border-l-[3px]"][class*="bg-primary/5"]:hover, div[class*="border-l-[3px]"][class*="bg-primary/5"]:hover {
-  background-color: hsl(302, 49%, 80%) !important;
+  background-color: #dcc48f !important;
 }
 button[class*="border-l-[3px]"][class*="bg-primary/5"] span, button[class*="border-l-[3px]"][class*="bg-primary/5"] svg, button[class*="border-l-[3px]"][class*="bg-primary/5"] button, div[class*="border-l-[3px]"][class*="bg-primary/5"] span, div[class*="border-l-[3px]"][class*="bg-primary/5"] svg, div[class*="border-l-[3px]"][class*="bg-primary/5"] button {
-  color: #000 !important;
+  color: #000000 !important;
 }
 
 div.sticky div[class*=hidden][class*="md:grid"] {
-  background-color: hsl(205, 60%, 87%) !important;
+  background-color: #3b3d24 !important;
 }
 div.sticky div[class*=hidden][class*="md:grid"]:hover {
-  background-color: hsl(205, 60%, 83%) !important;
+  background-color: #47492b !important;
 }
 
 div.sticky[class*=top-0][class*=bg-background][class*=hidden][class*="md:flex"] {
-  background-color: hsl(45, 100%, 98%) !important;
-  background: hsl(45, 100%, 98%) !important;
+  background-color: #20221b !important;
+  background: #20221b !important;
   border: none !important;
   border-bottom: none !important;
   border-bottom-width: 0px !important;
@@ -51,46 +70,46 @@ div.sticky[class*=top-0][class*=bg-background][class*=hidden][class*="md:flex"] 
 }
 
 .mantine-SegmentedControl-control[data-active=true] {
-  background-color: hsl(205, 60%, 85%) !important;
+  background-color: #b08a3e !important;
   border-radius: var(--mantine-radius-sm) !important;
 }
 
 .mantine-SegmentedControl-label[data-active=true] {
-  color: hsl(232, 60%, 50%) !important;
+  color: #1c1a12 !important;
 }
 
 button.mantine-Button-root,
 button.mantine-UnstyledButton-root.mantine-Button-root,
 .mantine-Button-root[data-variant],
 .mantine-UnstyledButton-root[class*=mantine-Button] {
-  background: hsl(205, 60%, 85%) !important;
-  background-color: hsl(205, 60%, 85%) !important;
+  background: #b08a3e !important;
+  background-color: #b08a3e !important;
   border-color: transparent !important;
   box-shadow: none !important;
-  color: hsl(232, 60%, 50%) !important;
+  color: #1c1a12 !important;
 }
 button.mantine-Button-root:hover,
 button.mantine-UnstyledButton-root.mantine-Button-root:hover,
 .mantine-Button-root[data-variant]:hover,
 .mantine-UnstyledButton-root[class*=mantine-Button]:hover {
-  background: hsl(205, 60%, 80%) !important;
-  background-color: hsl(205, 60%, 80%) !important;
+  background: #9a7733 !important;
+  background-color: #9a7733 !important;
 }
 button.mantine-Button-root[aria-pressed=false],
 button.mantine-UnstyledButton-root.mantine-Button-root[aria-pressed=false],
 .mantine-Button-root[data-variant][aria-pressed=false],
 .mantine-UnstyledButton-root[class*=mantine-Button][aria-pressed=false] {
-  background: #fff !important;
-  background-color: #fff !important;
-  color: hsl(0, 0%, 70%) !important;
+  background: #33352d !important;
+  background-color: #33352d !important;
+  color: #a3a690 !important;
 }
 button.mantine-Button-root[aria-pressed=false]:not([data-disabled]):hover,
 button.mantine-UnstyledButton-root.mantine-Button-root[aria-pressed=false]:not([data-disabled]):hover,
 .mantine-Button-root[data-variant][aria-pressed=false]:not([data-disabled]):hover,
 .mantine-UnstyledButton-root[class*=mantine-Button][aria-pressed=false]:not([data-disabled]):hover {
-  background: hsl(0, 0%, 85%) !important;
-  background-color: hsl(0, 0%, 85%) !important;
-  color: #fff !important;
+  background: #43463a !important;
+  background-color: #43463a !important;
+  color: #eceee0 !important;
 }
 
 span.tabular-nums.shrink-0[class*=text-destructive] {
@@ -137,16 +156,16 @@ button[class*="group/type-header"] svg {
 }
 
 [data-slot=sidebar-inner], .bg-sidebar, div.flex.items-center.bg-muted\/50, div[id=budget-table-side] div[class*=bg-panel], div[id=calendar-side] div[class*=bg-panel] {
-  background-color: hsl(70, 45%, 85%) !important;
+  background-color: #666633 !important;
   border-color: transparent !important;
 }
 
 [data-slot=sidebar-menu-button]:hover, [data-slot=sidebar-menu-button][data-active=true], [data-slot=sidebar-menu-button].active {
-  background-color: hsl(205, 60%, 80%) !important;
+  background-color: #9a7733 !important;
 }
 
 .mantine-NavLink-root:hover, .mantine-NavLink-root[data-active=true], .mantine-NavLink-root.active {
-  background-color: hsl(205, 60%, 80%) !important;
+  background-color: #9a7733 !important;
 }
 
 div[class*="text-sidebar-foreground/55"],
@@ -161,7 +180,7 @@ span[class*="text-sidebar-foreground/40"] {
 }
 
 .hover\:bg-sidebar-accent:hover, .hover\:bg-sidebar-accent[data-expanded=true], .hover\:bg-sidebar-accent\/40:hover, .hover\:bg-sidebar-accent\/40[data-expanded=true], .hover\:bg-sidebar-accent\/50:hover, .hover\:bg-sidebar-accent\/50[data-expanded=true] {
-  background-color: hsl(205, 60%, 80%) !important;
+  background-color: #9a7733 !important;
 }
 
 div[data-testid=virtuoso-item-list] {
@@ -170,83 +189,83 @@ div[data-testid=virtuoso-item-list] {
 
 div[data-budget-scroll-container=""],
 div[data-budget-scroll-container] {
-  background-color: hsl(45, 100%, 98%) !important;
-  background: hsl(45, 100%, 98%) !important;
+  background-color: #20221b !important;
+  background: #20221b !important;
 }
 
 div[data-index][data-item-index] {
-  background-color: hsl(45, 100%, 98%) !important;
+  background-color: #20221b !important;
 }
 div[data-index][data-item-index]:has([data-virtual-item-key]) {
-  background-color: hsl(45, 100%, 92%) !important;
+  background-color: #33352d !important;
 }
 
 div[class*=bg-table-bg] {
-  background-color: hsl(45, 100%, 92%) !important;
-  background: hsl(45, 100%, 92%) !important;
+  background-color: #33352d !important;
+  background: #33352d !important;
 }
 
 div[role=table][aria-label="Budget categories"] div[role=row][class*=sticky][class*=top-0] {
-  background-color: hsl(45, 50%, 85%) !important;
-  background: hsl(45, 50%, 85%) !important;
+  background-color: #3b3d24 !important;
+  background: #3b3d24 !important;
 }
 div[role=table][aria-label="Budget categories"] div[role=row][class*=sticky][class*=top-0] div[role=columnheader], div[role=table][aria-label="Budget categories"] div[role=row][class*=sticky][class*=top-0] span, div[role=table][aria-label="Budget categories"] div[role=row][class*=sticky][class*=top-0] button {
-  color: hsl(232, 60%, 50%) !important;
+  color: #dfe0b0 !important;
 }
 
 div[role=row].bg-budget-group, div[role=row].bg-budget-group * {
-  color: hsl(232, 60%, 50%) !important;
+  color: #e2e4d3 !important;
 }
 div[role=row].bg-budget-group {
-  background-color: hsl(70, 45%, 85%) !important;
-  background: hsl(70, 45%, 85%) !important;
+  background-color: #43453a !important;
+  background: #43453a !important;
 }
 div[role=row].bg-budget-group:hover {
-  background-color: hsl(44, 75%, 78%) !important;
-  background: hsl(44, 75%, 78%) !important;
+  background-color: #4d4f43 !important;
+  background: #4d4f43 !important;
 }
 div[role=row].bg-budget-group.sticky, div[role=row].bg-budget-group.sticky * {
   color: color-mix(in oklab, var(--sidebar-foreground) 62%, transparent) !important;
 }
 
 div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]), div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]), [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]), .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]) {
-  background-color: color-mix(in srgb, hsl(45, 100%, 92%) 50%, transparent) !important;
+  background-color: color-mix(in srgb, #33352d 50%, transparent) !important;
 }
 div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]).cursor-pointer:hover, div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]).cursor-pointer:hover, [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]).cursor-pointer:hover, .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]).cursor-pointer:hover {
-  background-color: hsl(44, 75%, 88%) !important;
+  background-color: #404237 !important;
 }
 div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]), div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]), div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true], div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]), div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]), div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true], [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]), [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]), [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true], .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]), .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]), .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true] {
-  background-color: hsl(302, 75%, 93%) !important;
+  background-color: #46402c !important;
   background-image: none !important;
 }
 div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover, div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover, [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover, .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover {
-  background-color: hsl(302, 75%, 90%) !important;
+  background-color: #524a33 !important;
   background-image: none !important;
 }
 
 div[class*=hidden][class*="md:block"].shrink-0.overflow-hidden {
-  background-color: hsl(205, 60%, 80%) !important;
+  background-color: #171a12 !important;
 }
 div[class*=hidden][class*="md:block"].shrink-0.overflow-hidden div[role=row]:not(:has([data-checked=true])) {
-  background-color: hsl(205, 60%, 90%) !important;
+  background-color: #0e100a !important;
 }
 div[class*=hidden][class*="md:block"].shrink-0.overflow-hidden div[role=row]:not(:has([data-checked=true])):hover {
-  background-image: linear-gradient(hsl(205, 60%, 83%), hsl(205, 60%, 83%)) !important;
+  background-image: linear-gradient(#191c12, #191c12) !important;
 }
 
 div.border-dashed.cursor-pointer.select-none {
-  background-color: hsl(205, 60%, 92%) !important;
+  background-color: #191c12 !important;
 }
 
 div.border-dashed.cursor-pointer.select-none:hover {
-  background-color: hsl(205, 60%, 83%) !important;
+  background-color: #24281a !important;
 }
 
 .mantine-ScrollArea-root:has(> .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 button[data-testid=transaction-card-activator]) > .mantine-ScrollArea-viewport > .mantine-ScrollArea-content > div.space-y-2 {
-  background-color: #fff !important;
+  background-color: #171a12 !important;
   border: 1px solid var(--surface-border, var(--border)) !important;
   border-radius: var(--radius-lg, 0.5rem) !important;
-  box-shadow: var(--shadow-card, 0 1px 2px rgba(0, 0, 0, 0.06)) !important;
+  box-shadow: var(--shadow-card, 0 1px 2px rgba(0, 0, 0, 0.3)) !important;
   padding: 0.75rem !important;
   overflow: hidden !important;
 }
@@ -256,19 +275,19 @@ div.border-dashed.cursor-pointer.select-none:hover {
 }
 
 div[class*=flex][class*=cursor-pointer]:has(button[data-testid=transaction-card-activator]) {
-  background-color: hsl(45, 100%, 92%) !important;
+  background-color: #33352d !important;
   transition: background-color 0.15s ease !important;
 }
 div[class*=flex][class*=cursor-pointer]:has(button[data-testid=transaction-card-activator]):hover {
-  background-color: hsl(44, 75%, 88%) !important;
+  background-color: #3b3d24 !important;
   outline: none !important;
   border-color: transparent !important;
 }
 
 div[class*=bg-destructive-strong] {
-  background-color: hsl(0, 76%, 90%) !important;
-  background: hsl(0, 76%, 90%) !important;
-  border-color: hsl(230, 10%, 89%) !important;
+  background-color: #3d2a26 !important;
+  background: #3d2a26 !important;
+  border-color: #20221b !important;
   border-width: 1px !important;
 }
 div[class*=bg-destructive-strong] p, div[class*=bg-destructive-strong] h1, div[class*=bg-destructive-strong] div:not([class*=mantine-RollingNumber]), div[class*=bg-destructive-strong] svg {
@@ -294,9 +313,9 @@ div[class*=bg-destructive-strong] span[class*=bg-white]:hover {
 }
 
 div[class*=bg-positive-strong] {
-  background-color: hsl(95, 36%, 85%) !important;
-  background: hsl(95, 36%, 85%) !important;
-  border-color: hsl(230, 10%, 89%) !important;
+  background-color: #263321 !important;
+  background: #263321 !important;
+  border-color: #20221b !important;
   border-width: 1px !important;
 }
 div[class*=bg-positive-strong] p, div[class*=bg-positive-strong] h1, div[class*=bg-positive-strong] div:not([class*=mantine-RollingNumber]), div[class*=bg-positive-strong] svg {
@@ -310,12 +329,12 @@ div[class*=bg-positive-strong] .mantine-RollingNumber-root span[class*=copyValue
   width: 0px !important;
 }
 div[class*=bg-positive-strong] .mantine-RollingNumber-root span, div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-char, div[class*=bg-positive-strong] .mantine-RollingNumber-root .mantine-RollingNumber-digitColumn span {
-  color: hsl(95, 76%, 33%) !important;
+  color: #6cc96a !important;
 }
 div[class*=bg-positive-strong] span[class*=bg-white] {
   background-color: color-mix(in srgb, var(--positive, var(--chart-positive)) 12%, transparent) !important;
   background: color-mix(in srgb, var(--positive, var(--chart-positive)) 12%, transparent) !important;
-  color: hsl(95, 76%, 33%) !important;
+  color: #6cc96a !important;
 }
 div[class*=bg-positive-strong] span[class*=bg-white]:hover {
   background-color: color-mix(in srgb, var(--positive, var(--chart-positive)) 22%, transparent) !important;
@@ -366,7 +385,7 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
     transition: background-color 150ms;
   }
   ul[aria-label="Favorite categories"] > li:hover {
-    background-color: hsl(44, 75%, 88%);
+    background-color: #3b3d24;
   }
   ul[aria-label="Favorite categories"] button {
     cursor: pointer;
@@ -374,35 +393,35 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 }
 /* Weekend day cells */
 .grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
-  background-color: hsl(0, 0%, 98%) !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Keep a hover effect on weekends */
 .grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground):hover {
-  background-color: hsl(0, 0%, 91%) !important;
+  background-color: #33352d !important;
 }
 
 /* Selected day: lighter tint, the ring still marks it */
 .grid.grid-cols-7 > button.ring-2.ring-inset {
-  background-color: hsl(45, 100%, 93%) !important;
+  background-color: #555529 !important;
 }
 
 /* Weekday background: same as page background */
 .grid.grid-cols-7 > button.bg-card {
-  background-color: hsl(45, 100%, 98%) !important;
+  background-color: #20221b !important;
 }
 
 /* Weekday hover: darker than the selected tint */
 .grid.grid-cols-7 > button.bg-card:hover {
-  background-color: hsl(0, 0%, 91%) !important;
+  background-color: #33352d !important;
 }
 
 /* Optional: give the selected cell a hover response too */
 .grid.grid-cols-7 > button.ring-2.ring-inset:hover {
-  background-color: hsl(45, 75%, 90%) !important;
+  background-color: #666633 !important;
 }
 
 /* Days from other months: translucent overlay on top of whatever background the cell has */
 .grid.grid-cols-7 > button.text-muted-foreground {
-  background-image: linear-gradient(hsla(0, 0%, 93%, 0.9), hsla(0, 0%, 93%, 0.9)) !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) !important;
 }
