@@ -8,7 +8,7 @@
 }
 
 body::after {
-  content: "CSS 10.10.26.3";
+  content: "CSS 10.10.26.4";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -322,7 +322,9 @@ div[class*=bg-positive-strong] span[class*=bg-white]:hover {
 }
 
 div[data-edit-field=outflow],
-div[data-edit-field=outflow] [class*=mantine-RollingNumber],
+div[data-edit-field=outflow] [class*=mantine-RollingNumber] {
+  color: var(--destructive) !important;
+}
 div[data-edit-field=outflow] span, div[data-edit-field=outflow] .mantine-RollingNumber-char, div[data-edit-field=outflow] .mantine-RollingNumber-digitColumn span {
   color: var(--destructive) !important;
 }

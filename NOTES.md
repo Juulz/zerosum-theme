@@ -11,6 +11,9 @@
 - Magic CSS uses an old Sass. Write colors in the comma form,
   `rgba(0, 0, 0, 0.1)`, not `rgb(0 0 0 / 0.1)`. `npm run build` fails on the
   space-separated form.
+- Don't put an interpolated selector list (e.g. `#{$rolling-number-digits}`) in
+  the same nested selector as `&,`. Magic CSS's Sass drops the parent from it,
+  so `span` alone ends up styled site-wide. Give it its own nested block.
 - The build checks with current Dart Sass, which accepts more than Magic CSS
   does. A file that builds can still fail in Magic CSS, so check the badge after
   pasting.
