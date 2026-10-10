@@ -1,0 +1,94 @@
+// =================================================
+// THEME: Deep Forest — ZeroSum Custom CSS by Juulz
+// =================================================
+// Colors only. Selectors live in rules.scss; see NOTES.md to make a new theme.
+// Dark olive and gold palette based on Okabe-Ito (not color-blind friendly)
+
+// --- Page & header ---
+$page-background:                       #222222;
+$account-page-header:                   #222222;
+$foreground:                            #d9e2ec; // main text color; null keeps the site's
+
+// --- Sidebar ---
+$sidebar-bg:                            hsl(60, 33%, 18%);
+
+// --- Buttons ---
+$primary-button-bg:                     #9a7733;
+$primary-button-bg-hover:               #86682d;
+$primary-button-text:                   #d9e2ec;
+$toggle-button-notpressed-bg:           #33352d;
+$toggle-button-notpressed-bg-hover:     #43463a;
+$toggle-button-notpressed-text-resting: #a3a690;
+$toggle-button-notpressed-text-hover:   #eceee0;
+
+// --- Transaction approve button (left-border highlight) ---
+$transaction-approve-button:            #9a7733;
+$transaction-approve-hover:             #86682d;
+$transaction-approve-accent:            #a3412b;
+$transaction-approve-text:              #d9e2ec;
+
+// --- Budget table ---
+$category-header-bg:                    #3b3d24;
+$category-header-text:                  #dfe0b0;
+$group-header-bg:                       #43453a;
+$group-header-bg-hover:                 #4d4f43;
+$group-header-text:                     #e2e4d3;
+$table-bg:                              #333333;
+$table-hover:                           #404237;
+$table-selected:                        #46402c;
+$table-selected-hover:                  #524a33;
+
+// --- Scheduled transactions & forecast ---
+$scheduled-bg:                          #171a12;
+$scheduled-header:                      #3b3d24;
+$scheduled-header-hover:                #47492b;
+$schedule-resting:                      #0e100a;
+$schedule-hover:                        #191c12;
+$forecast-resting:                      #191c12;
+$forecast-hover:                        #24281a;
+
+// --- Right sidebar transaction cards ---
+$transaction-list-bg:                   #171a12;
+$transaction-list-shadow:               rgba(0, 0, 0, 0.3);
+$transaction-card-hover:                #3b3d24;
+
+// --- Over/under-budget banners ---
+$budget-banner-border:                  #20221b;
+$over-budget-bg:                        #3d2a26;
+$under-budget-bg:                       #263321;
+$under-budget-text:                     #6cc96a;
+
+// --- Calendar ---
+$calendar-weekend:                      rgba(0, 0, 0, 0.20);
+$calendar-weekend-hover:                #33352d;
+$calendar-weekday-hover:                #33352d;
+$calendar-selected:                     #555529;
+$calendar-selected-hover:               #666633;
+$calendar-other-month-overlay:          rgba(0, 0, 0, 0.3); // translucent tint over days from other months
+
+// --- Money colors (also exported as site CSS variables) ---
+$destructive:                           hsl(6, 71%, 63%);
+$positive:                              #6cc96a;
+$chart-positive:                        #6cc96a;
+$chart-negative:                        $destructive; // this and the rest of the file: null keeps the site's
+$positive-strong:                       #2f7a3a;
+$destructive-strong:                    #a8352a;
+$mantine-red-filled:                    $destructive-strong;
+
+// --- Chart series (exported as site CSS variables) ---
+$chart-1:                               #d4a73a;
+$chart-2:                               #c25a7c;
+$chart-3:                               #5fae9e;
+$chart-4:                               #7d8f2e;
+$chart-5:                               #8fa8d0;
+$chart-6:                               #b5582f;
+$chart-7:                               #3a5a8a;
+$chart-8:                               #e08a4a;
+$chart-9:                               #8a5a9e;
+
+// --- Status & progress (exported as site CSS variables) ---
+$status-cleared:                        $positive;
+$status-scheduled:                      #7fb3c9;
+$progress-positive:                     #57b05f;
+$progress-negative:                     $destructive;
+$progress-info:                         hsl(202, 100%, 65%);

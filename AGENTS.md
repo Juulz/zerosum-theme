@@ -20,7 +20,9 @@ The user describes a change and usually pastes the HTML of the element.
 4. If the site's own `!important` Tailwind class wins, don't stack more
    `!important`; use the `background-image` / `box-shadow` workarounds in
    NOTES.md.
-5. Use comma-separated colors (`rgba(0, 0, 0, 0.1)`). Magic CSS's Sass is old.
+5. Use comma-separated colors (`rgba(0, 0, 0, 0.1)`). Magic CSS's Sass is old
+ (libsass 3.6). If you change nesting or interpolated selectors, compile with
+ it too (see NOTES.md) and check its selectors match `dist/<theme>.css`.
 6. `npm install` (once), `npm run bump`, then `npm run build`. Fix anything it
    reports. Never edit `dist/` by hand.
 7. Commit the source changes and the rebuilt `dist/`, push, and open a pull
