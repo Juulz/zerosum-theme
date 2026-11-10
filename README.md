@@ -8,7 +8,9 @@ Apply them with the ZeroSum Themes Chrome extension in [`extension/`](extension)
 
 To use a browser other than Chrome, it must have an extension (addon) that supports SCSS. No instructions for use of alternate browsers or their addons is available here or planned.
 
-Chrome: Install [Magic CSS](https://github.com/webextensions/live-css-editor), navigate to my.zerosumapp.com (or use the Chrome PWA) and paste one of the *.scss [`dist/`](dist) files into Magic's SCSS tab.
+Chrome: 
+
+Install [Magic CSS](https://github.com/webextensions/live-css-editor), navigate to my.zerosumapp.com (or use the Chrome PWA) and paste one of the *.scss [`dist/`](dist) files into Magic's SCSS tab.
 
 ## Chrome Developer Extension
 
@@ -19,10 +21,14 @@ It keeps the last copy it downloaded, so the theme shows instantly and still wor
 
 ### Install it once:
 
-1. Get the `extension` folder: on [GitHub](https://github.com/Juulz/zerosum-theme), click on `<> Code`, then Download ZIP, then unzip.
-2. Open `chrome://extensions`, turn on Developer mode (top right), click Load unpacked, and pick the `extension` folder in the extracted files. It should be at `zerosum-theme-main` > `zerosum-theme-main` > `extension` .
-4. The settings page opens. Pick a theme.
-5. Turn Magic CSS and any other Custom CSS extension off for ZeroSum so the two don't both apply.
+1. Get the `extension` folder:
+ - on [GitHub](https://github.com/Juulz/zerosum-theme), click on `<> Code`, then Download ZIP, then unzip.
+2. Open `chrome://extensions`,
+   - turn on Developer mode (top right),
+   - click Load unpacked, and
+   - pick the `extension` folder in the extracted files. It should be at `zerosum-theme-main` > `zerosum-theme-main` > `extension` .
+3. The settings page opens. Pick a theme.
+4. Turn Magic CSS and any other Custom CSS extension off for ZeroSum so the two don't both apply.
 
 To open the settings later, click the extension's icon in a normal Chrome window and choose Options, 
 or go to `chrome://extensions` > ZeroSum Themes > Details > Extension options. 
