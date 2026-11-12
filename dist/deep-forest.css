@@ -27,7 +27,7 @@
 }
 
 body::after {
-  content: "CSS 11.12.26.2";
+  content: "CSS 11.12.26.3";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -42,7 +42,7 @@ body::after {
 }
 
 button[class*=bg-banner-wash], button[class*=bg-banner-wash] span, button[class*=bg-banner-wash] svg {
-  color: var(--warning) !important;
+  color: var(--warning-text, var(--warning)) !important;
 }
 
 div.sticky div[class*=hidden][class*="md:grid"] {
