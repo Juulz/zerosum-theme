@@ -27,7 +27,7 @@
 }
 
 body::after {
-  content: "CSS 11.12.26.1";
+  content: "CSS 11.12.26.2";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -39,17 +39,6 @@ body::after {
   border-radius: 3px;
   opacity: 0.6;
   pointer-events: none;
-}
-
-button[class*="border-l-[3px]"][class*="bg-primary/5"], div[class*="border-l-[3px]"][class*="bg-primary/5"] {
-  background-color: #9a7733 !important;
-  border-left-color: #a3412b !important;
-}
-button[class*="border-l-[3px]"][class*="bg-primary/5"]:hover, div[class*="border-l-[3px]"][class*="bg-primary/5"]:hover {
-  background-color: #86682d !important;
-}
-button[class*="border-l-[3px]"][class*="bg-primary/5"] span, button[class*="border-l-[3px]"][class*="bg-primary/5"] svg, button[class*="border-l-[3px]"][class*="bg-primary/5"] button, div[class*="border-l-[3px]"][class*="bg-primary/5"] span, div[class*="border-l-[3px]"][class*="bg-primary/5"] svg, div[class*="border-l-[3px]"][class*="bg-primary/5"] button {
-  color: #d9e2ec !important;
 }
 
 button[class*=bg-banner-wash], button[class*=bg-banner-wash] span, button[class*=bg-banner-wash] svg {

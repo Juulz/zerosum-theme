@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.12.26.1";
+$css-version: "11.12.26.2";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -9,7 +9,6 @@ $css-version: "11.12.26.1";
 // ==========================================
 // 1. SELECTOR & CLASS NAME DICTIONARY
 // ==========================================
-$primary-border-btn: 'button[class*="border-l-[3px]"][class*="bg-primary/5"], div[class*="border-l-[3px]"][class*="bg-primary/5"]';
 $budget-header-btn:  'button[class*="group/type-header"]';
 // Dynamic Sidebar Mapping - Unifies standard sidebar, budget side overview, and calendar side layouts
 $sidebar-inner: '[data-slot="sidebar-inner"], .bg-sidebar, div.flex.items-center.bg-muted\\/50, div[id="budget-table-side"] div[class*="bg-panel"], div[id="calendar-side"] div[class*="bg-panel"]';
@@ -93,20 +92,6 @@ body::after {
 // ==========================================
 // 3. COMPONENT STYLES & OVERRIDES (Flat & Safe)
 // ==========================================
-
-// --- Primary Sidebar & Layout Borders ---
-#{$primary-border-btn} {
-  background-color: $transaction-approve-button !important;
-  border-left-color: $transaction-approve-accent !important;
-
-  &:hover {
-    background-color: $transaction-approve-hover !important;
-  }
-  
-  span, svg, button {
-    color: $transaction-approve-text !important;
-  }
-}
 
 // --- Transactions-to-Approve Banner (top of page) ---
 button[class*="bg-banner-wash"] {
