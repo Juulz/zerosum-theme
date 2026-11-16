@@ -9,7 +9,7 @@
 }
 
 body::after {
-  content: "CSS 11.12.26.3";
+  content: "CSS 11.16.26.1";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -401,4 +401,9 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
 /* Days from other months: translucent overlay on top of whatever background the cell has */
 .grid.grid-cols-7 > button.text-muted-foreground {
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)) !important;
+}
+
+/* Day number: an auto-sized SVG whose text uses fill="currentColor" */
+svg[role=img][overflow=visible]:has(> text[text-anchor=middle]) {
+  color: var(--primary) !important;
 }

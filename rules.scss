@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.12.26.3";
+$css-version: "11.16.26.1";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -570,4 +570,9 @@ div[data-testid*="-side"] a#{$sidebar-button} span[class*="tabular-nums"][class*
 /* Days from other months: translucent overlay on top of whatever background the cell has */
 #{$calendar-day}.text-muted-foreground {
   background-image: linear-gradient($calendar-other-month-overlay, $calendar-other-month-overlay) !important;
+}
+
+/* Day number: an auto-sized SVG whose text uses fill="currentColor" */
+svg[role="img"][overflow="visible"]:has(> text[text-anchor="middle"]) {
+  color: var(--primary) !important;
 }
