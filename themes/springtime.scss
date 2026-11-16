@@ -7,6 +7,7 @@
 $page-background:                       hsl(45, 100%, 98%);
 $account-page-header:                   hsl(45,100%,98%);
 $foreground:                            null; // main text color; null keeps the site's
+$primary:                               null;    // site --primary (accents, rings, calendar day numbers); null keeps the site's
 
 // --- Sidebar ---
 $sidebar-bg:                            hsl(70, 45%, 85%);
