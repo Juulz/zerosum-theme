@@ -8,6 +8,7 @@
 $page-background:                       #222222;
 $account-page-header:                   #222222;
 $foreground:                            #d9e2ec; // main text color; null keeps the site's
+$primary:                               null;    // site --primary (accents, rings, calendar day numbers); null keeps the site's
 
 // --- Sidebar ---
 $sidebar-bg:                            hsl(60, 33%, 18%);
@@ -53,11 +54,7 @@ $under-budget-bg:                       #263321;
 $under-budget-text:                     #6cc96a;
 
 // --- Calendar ---
-$calendar-weekend:                      rgba(0, 0, 0, 0.20);
-$calendar-weekend-hover:                #33352d;
 $calendar-weekday-hover:                #33352d;
-$calendar-selected:                     #555529;
-$calendar-selected-hover:               #666633;
 $calendar-other-month-overlay:          rgba(0, 0, 0, 0.3); // translucent tint over days from other months
 
 // --- Money colors (also exported as site CSS variables) ---

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --mantine-color-brand-light-hover: hsl(205, 60%, 80%) !important;
   --mantine-color-brand-light: hsl(205, 60%, 85%) !important;
@@ -8,7 +9,7 @@
 }
 
 body::after {
-  content: "CSS 11.12.26.3";
+  content: "CSS 11.16.26.5";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -367,37 +368,28 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
     cursor: pointer;
   }
 }
-/* Weekend day cells */
-.grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground) {
-  background-color: hsl(0, 0%, 98%) !important;
-}
-
-/* Keep a hover effect on weekends */
-.grid.grid-cols-7 > button.bg-muted\/40:not(.text-muted-foreground):hover {
-  background-color: hsl(0, 0%, 91%) !important;
-}
-
-/* Selected day: lighter tint, the ring still marks it */
-.grid.grid-cols-7 > button.ring-2.ring-inset {
-  background-color: hsl(45, 100%, 93%) !important;
-}
-
-/* Weekday background: same as page background */
+/* Day background: same as page background */
 .grid.grid-cols-7 > button.bg-card {
   background-color: hsl(45, 100%, 98%) !important;
 }
 
-/* Weekday hover: darker than the selected tint */
+/* Day hover */
 .grid.grid-cols-7 > button.bg-card:hover {
   background-color: hsl(0, 0%, 91%) !important;
-}
-
-/* Optional: give the selected cell a hover response too */
-.grid.grid-cols-7 > button.ring-2.ring-inset:hover {
-  background-color: hsl(45, 75%, 90%) !important;
 }
 
 /* Days from other months: translucent overlay on top of whatever background the cell has */
 .grid.grid-cols-7 > button.text-muted-foreground {
   background-image: linear-gradient(hsla(0, 0%, 93%, 0.9), hsla(0, 0%, 93%, 0.9)) !important;
+}
+
+/* Day number (its text uses fill="currentColor"). Today sits on a primary circle
+   and other-month days stay muted, so both keep the site's color. */
+[data-testid=calendar-grid] > button:not([aria-current=date]):not(.text-muted-foreground) svg[role=img] {
+  color: var(--primary) !important;
+}
+
+/* Day-of-week header row (Sun–Sat) above the grid */
+[data-testid=calendar-main] .grid.grid-cols-7:not([data-testid=calendar-grid]) > div {
+  color: var(--primary) !important;
 }

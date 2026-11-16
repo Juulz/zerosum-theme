@@ -16,7 +16,11 @@ The user describes a change and usually pastes the HTML of the element.
    selectors from the dictionary at the top; add one there if it's used more
    than once.
 3. Never write a literal color in `rules.scss`. Add a variable to **every**
-   file in `themes/` (same name, same section), then use it.
+   file in `themes/` (same name, same section), then use it. When the user
+   names an existing site CSS variable (e.g. "make it `--primary`"), use
+   `var(--primary)` directly instead; it's defined by the site, so don't
+   create a theme variable or ask whether it exists. Create a new theme
+   variable only when the user asks for one or gives a literal color.
 4. If the site's own `!important` Tailwind class wins, don't stack more
    `!important`; use the `background-image` / `box-shadow` workarounds in
    NOTES.md.
