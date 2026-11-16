@@ -7,7 +7,7 @@
   --chart-positive: #1affc2 !important;
   --positive: #1affc2 !important;
   --foreground: #d9e2ec !important;
-  --primary: #0072b2 !important;
+  --primary: #62a8d0 !important;
   --chart-negative: #ff6f00 !important;
   --positive-strong: #00805e !important;
   --destructive-strong: #b34d00 !important;
@@ -29,7 +29,7 @@
 }
 
 body::after {
-  content: "CSS 11.16.26.4a";
+  content: "CSS 11.16.26.5";
   position: fixed;
   bottom: 4px;
   left: 50px;

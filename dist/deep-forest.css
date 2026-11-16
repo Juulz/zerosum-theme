@@ -28,7 +28,7 @@
 }
 
 body::after {
-  content: "CSS 11.16.26.4a";
+  content: "CSS 11.16.26.5";
   position: fixed;
   bottom: 4px;
   left: 50px;
