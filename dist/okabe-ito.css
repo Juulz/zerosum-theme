@@ -27,7 +27,7 @@
 }
 
 body::after {
-  content: "CSS 11.16.26.1";
+  content: "CSS 11.16.26.2";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -421,7 +421,8 @@ button[class*=type-header] > span[class*=tabular-nums][class*=text-destructive] 
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) !important;
 }
 
-/* Day number: an auto-sized SVG whose text uses fill="currentColor" */
-svg[role=img][overflow=visible]:has(> text[text-anchor=middle]) {
+/* Day number (its text uses fill="currentColor"). Today sits on a primary circle
+   and other-month days stay muted, so both keep the site's color. */
+[data-testid=calendar-grid] > button:not([aria-current=date]):not(.text-muted-foreground) svg[role=img] {
   color: var(--primary) !important;
 }

@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.16.26.1";
+$css-version: "11.16.26.2";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -572,7 +572,8 @@ div[data-testid*="-side"] a#{$sidebar-button} span[class*="tabular-nums"][class*
   background-image: linear-gradient($calendar-other-month-overlay, $calendar-other-month-overlay) !important;
 }
 
-/* Day number: an auto-sized SVG whose text uses fill="currentColor" */
-svg[role="img"][overflow="visible"]:has(> text[text-anchor="middle"]) {
+/* Day number (its text uses fill="currentColor"). Today sits on a primary circle
+   and other-month days stay muted, so both keep the site's color. */
+[data-testid="calendar-grid"] > button:not([aria-current="date"]):not(.text-muted-foreground) svg[role="img"] {
   color: var(--primary) !important;
 }
