@@ -2,6 +2,7 @@
 :root {
   --mantine-color-brand-light-hover: #86682d !important;
   --mantine-color-brand-light: #9a7733 !important;
+  --sidebar-hover: #9a7733 !important;
   --background: #222222 !important;
   --destructive: hsl(6, 71%, 63%) !important;
   --chart-positive: #6cc96a !important;
@@ -36,7 +37,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.17";
+  content: "CSS 11.24.26.18";
   position: fixed;
   bottom: 4px;
   left: 50px;

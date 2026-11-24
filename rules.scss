@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.24.26.17";
+$css-version: "11.24.26.18";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -48,6 +48,7 @@ $calendar-day:       '.grid.grid-cols-7 > button';
 :root {
   --mantine-color-brand-light-hover: #{$primary-button-bg-hover} !important;
   --mantine-color-brand-light:       #{$primary-button-bg} !important;
+  --sidebar-hover:                   #{$primary-button-bg} !important;
   --background:                      #{$page-background} !important;
   --destructive:                     #{$destructive} !important;
   --chart-positive:                  #{$chart-positive} !important;
