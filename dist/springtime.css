@@ -9,8 +9,8 @@
   --label-wash: #f2f2f3 !important;
   --positive-pill: var(--label-wash) !important;
   --positive-pill-foreground: var(--positive) !important;
-  --warning-pill: var(--label-wash) !important;
-  --warning-pill-foreground: var(--warning-text) !important;
+  --warning-pill: var(--zs-yellow-1) !important;
+  --warning-pill-foreground: var(--zs-yellow-6) !important;
   --destructive-pill: var(--label-wash) !important;
   --destructive-pill-foreground: var(--destructive) !important;
   --status-info-pill: var(--label-wash) !important;
@@ -18,7 +18,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.11";
+  content: "CSS 11.24.26.12";
   position: fixed;
   bottom: 4px;
   left: 50px;
