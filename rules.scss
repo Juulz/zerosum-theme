@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.24.26.14";
+$css-version: "11.24.26.15";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -254,6 +254,17 @@ span[class*="text-sidebar-foreground/40"] {
   &:not([data-disabled]):hover, &[aria-expanded="true"] {
     background-color: $primary-button-bg-hover !important;
   }
+}
+
+// Buttons that use the site's hover:bg-sidebar-hover (e.g. the budget switcher)
+button[class*="hover:bg-sidebar-hover"] {
+  &:hover, &[aria-expanded="true"] {
+    background-color: $primary-button-bg-hover !important;
+  }
+}
+// Collapsed (icon-only) sidebar: the site keeps these transparent on hover
+[data-collapsible="icon"] button[class*="hover:bg-sidebar-hover"]:hover {
+  background-color: transparent !important;
 }
 
 // ==========================================
