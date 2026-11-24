@@ -37,7 +37,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.22";
+  content: "CSS 11.24.26.23";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -258,7 +258,8 @@ div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-chec
   background-image: none !important;
 }
 
-div[data-virtual-item-key] {
+div[data-virtual-item-key],
+div[role=row][data-budget-category-id] {
   --border: #212121 !important;
 }
 
