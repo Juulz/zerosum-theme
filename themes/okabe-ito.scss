@@ -63,6 +63,15 @@ $positive:                              #1affc2;
 $chart-positive:                        #1affc2;
 $chart-negative:                        $destructive; // this and the rest of the file: null keeps the site's
 $positive-strong:                       #00805e;
+$label-wash:                            null;
+$positive-pill:                         var(--label-wash);
+$positive-pill-foreground:              var(--positive);
+$warning-pill:                          var(--label-wash);
+$warning-pill-foreground:               var(--warning);
+$destructive-pill:                      var(--label-wash);
+$destructive-pill-foreground:           var(--destructive);
+$status-info-pill:                      var(--label-wash);
+$status-info-pill-foreground:           var(--status-info);
 $destructive-strong:                    #b34d00;
 $mantine-red-filled:                    $destructive-strong;
 
