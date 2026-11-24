@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.24.26.20";
+$css-version: "11.24.26.21";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -341,6 +341,13 @@ div[role="table"][aria-label="Budget categories"] div[role="row"][class*="sticky
         background-image: none !important;
       }
     }
+  }
+}
+
+// Ledger row divider lines: border-border (day breaks) and border-border-subtle both derive from --border
+@if $table-row-border != null {
+  div[data-virtual-item-key] {
+    --border: #{$table-row-border} !important;
   }
 }
 

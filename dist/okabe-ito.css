@@ -40,7 +40,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.20";
+  content: "CSS 11.24.26.21";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -259,6 +259,10 @@ div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-chec
 div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, div[role=row]:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover, div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, div[data-budget-category-id]:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover, [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, [class*=virtuoso-item-list] > div:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover, .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]):has([data-checked=true]):hover, .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group]):has([class*=checked]):hover, .mantine-Table-tr:not(.bg-budget-group):not([class*=bg-budget-group])[data-checked=true]:hover {
   background-color: #4f4235 !important;
   background-image: none !important;
+}
+
+div[data-virtual-item-key] {
+  --border: #5c5c5c !important;
 }
 
 div[class*=hidden][class*="md:block"].shrink-0.overflow-hidden {
