@@ -2,6 +2,7 @@
 :root {
   --mantine-color-brand-light-hover: #86682d !important;
   --mantine-color-brand-light: #9a7733 !important;
+  --sidebar-hover: #9a7733 !important;
   --background: #222222 !important;
   --destructive: hsl(6, 71%, 63%) !important;
   --chart-positive: #6cc96a !important;
@@ -36,7 +37,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.16";
+  content: "CSS 11.24.26.19";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -168,6 +169,10 @@ button[class*="group/type-header"] svg {
 
 [data-slot=sidebar-menu-button]:hover, [data-slot=sidebar-menu-button][data-active=true], [data-slot=sidebar-menu-button].active {
   background-color: #86682d !important;
+}
+
+span[aria-hidden=true][class*=bg-sidebar-hover]:has(+ ul[data-sidebar=menu]) {
+  display: none !important;
 }
 
 .mantine-NavLink-root:hover, .mantine-NavLink-root[data-active=true], .mantine-NavLink-root.active {
@@ -356,6 +361,10 @@ div[data-edit-field=outflow] [class*=mantine-RollingNumber] {
 }
 div[data-edit-field=outflow] span, div[data-edit-field=outflow] .mantine-RollingNumber-char, div[data-edit-field=outflow] .mantine-RollingNumber-digitColumn span {
   color: var(--destructive) !important;
+}
+
+div:has(> button[aria-label=Add]):has(button[aria-label="Import transactions"]) {
+  background-color: #222222 !important;
 }
 
 div[class*=grid][class*=text-muted-foreground] div[class*=justify-end][class*=text-foreground]:has(+ div[class*=justify-end][class*=text-icon-muted]) {

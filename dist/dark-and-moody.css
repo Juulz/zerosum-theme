@@ -2,6 +2,7 @@
 :root {
   --mantine-color-brand-light-hover: hsl(26, 12%, 30%) !important;
   --mantine-color-brand-light: hsl(26, 12%, 26%) !important;
+  --sidebar-hover: hsl(26, 12%, 26%) !important;
   --background: hsl(225, 19%, 33%) !important;
   --destructive: hsl(15, 70%, 60%) !important;
   --chart-positive: hsl(123, 50%, 50%) !important;
@@ -18,7 +19,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.16";
+  content: "CSS 11.24.26.19";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -150,6 +151,10 @@ button[class*="group/type-header"] svg {
 
 [data-slot=sidebar-menu-button]:hover, [data-slot=sidebar-menu-button][data-active=true], [data-slot=sidebar-menu-button].active {
   background-color: hsl(26, 12%, 30%) !important;
+}
+
+span[aria-hidden=true][class*=bg-sidebar-hover]:has(+ ul[data-sidebar=menu]) {
+  display: none !important;
 }
 
 .mantine-NavLink-root:hover, .mantine-NavLink-root[data-active=true], .mantine-NavLink-root.active {
@@ -338,6 +343,10 @@ div[data-edit-field=outflow] [class*=mantine-RollingNumber] {
 }
 div[data-edit-field=outflow] span, div[data-edit-field=outflow] .mantine-RollingNumber-char, div[data-edit-field=outflow] .mantine-RollingNumber-digitColumn span {
   color: var(--destructive) !important;
+}
+
+div:has(> button[aria-label=Add]):has(button[aria-label="Import transactions"]) {
+  background-color: hsl(225, 19%, 33%) !important;
 }
 
 div[class*=grid][class*=text-muted-foreground] div[class*=justify-end][class*=text-foreground]:has(+ div[class*=justify-end][class*=text-icon-muted]) {

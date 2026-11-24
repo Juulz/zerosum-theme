@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.24.26.16";
+$css-version: "11.24.26.19";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -48,6 +48,7 @@ $calendar-day:       '.grid.grid-cols-7 > button';
 :root {
   --mantine-color-brand-light-hover: #{$primary-button-bg-hover} !important;
   --mantine-color-brand-light:       #{$primary-button-bg} !important;
+  --sidebar-hover:                   #{$primary-button-bg} !important;
   --background:                      #{$page-background} !important;
   --destructive:                     #{$destructive} !important;
   --chart-positive:                  #{$chart-positive} !important;
@@ -224,6 +225,11 @@ span[class*="md:text-[9px]"], span[class*="text-[10.5px]"] {
   &:hover, &[data-active="true"], &.active {
     background-color: $primary-button-bg-hover !important;
   }
+}
+
+// Thin guide line down the left of the account list
+span[aria-hidden="true"][class*="bg-sidebar-hover"]:has(+ ul[data-sidebar="menu"]) {
+  display: none !important;
 }
 
 #{$nav-link} {
@@ -476,6 +482,11 @@ div[data-edit-field="outflow"] {
   #{$rolling-number-digits} {
     color: var(--destructive) !important;
   }
+}
+
+// Ledger toolbar (Add, search, Filters, Import, Export, Reconcile)
+div:has(> button[aria-label="Add"]):has(button[aria-label="Import transactions"]) {
+  background-color: $page-background !important;
 }
 
 // ==========================================
