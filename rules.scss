@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.24.26.18";
+$css-version: "11.24.26.19";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -482,6 +482,11 @@ div[data-edit-field="outflow"] {
   #{$rolling-number-digits} {
     color: var(--destructive) !important;
   }
+}
+
+// Ledger toolbar (Add, search, Filters, Import, Export, Reconcile)
+div:has(> button[aria-label="Add"]):has(button[aria-label="Import transactions"]) {
+  background-color: $page-background !important;
 }
 
 // ==========================================
