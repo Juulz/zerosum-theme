@@ -7,18 +7,18 @@
   --chart-positive: hsl(123, 76%, 33%) !important;
   --positive: hsl(123, 76%, 30%) !important;
   --label-wash: #f2f2f3 !important;
-  --positive-pill: var(--label-wash) !important;
+  --positive-pill: var(--zs-green-1) !important;
   --positive-pill-foreground: var(--positive) !important;
   --warning-pill: var(--zs-yellow-1) !important;
   --warning-pill-foreground: var(--zs-yellow-6) !important;
-  --destructive-pill: var(--label-wash) !important;
+  --destructive-pill: var(--zs-red-1) !important;
   --destructive-pill-foreground: var(--destructive) !important;
-  --status-info-pill: var(--label-wash) !important;
+  --status-info-pill: var(--zs-blue-1) !important;
   --status-info-pill-foreground: var(--status-info) !important;
 }
 
 body::after {
-  content: "CSS 11.24.26.12";
+  content: "CSS 11.24.26.13";
   position: fixed;
   bottom: 4px;
   left: 50px;
