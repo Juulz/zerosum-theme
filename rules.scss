@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.24.26.1";
+$css-version: "11.24.26.2";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -50,12 +50,14 @@ $calendar-day:       '.grid.grid-cols-7 > button';
   --destructive:                     #{$destructive} !important;
   --chart-positive:                  #{$chart-positive} !important;
   --positive:                        #{$positive} !important;
+  --positive-pill:                   var(--positive) !important;
   @if $foreground != null {
     --foreground:                    #{$foreground} !important;
   }
   @include site-var(primary,                  $primary);
   @include site-var(chart-negative,           $chart-negative);
   @include site-var(positive-strong,          $positive-strong);
+  @include site-var(positive-pill-foreground, $positive-pill-foreground);
   @include site-var(destructive-strong,       $destructive-strong);
   @include site-var(mantine-color-red-filled, $mantine-red-filled);
   @include site-var(status-cleared,           $status-cleared);

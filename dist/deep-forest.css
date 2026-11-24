@@ -6,9 +6,11 @@
   --destructive: hsl(6, 71%, 63%) !important;
   --chart-positive: #6cc96a !important;
   --positive: #6cc96a !important;
+  --positive-pill: var(--positive) !important;
   --foreground: #d9e2ec !important;
   --chart-negative: hsl(6, 71%, 63%) !important;
   --positive-strong: #2f7a3a !important;
+  --positive-pill-foreground: #000 !important;
   --destructive-strong: #a8352a !important;
   --mantine-color-red-filled: #a8352a !important;
   --status-cleared: #6cc96a !important;
@@ -28,7 +30,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.1";
+  content: "CSS 11.24.26.2";
   position: fixed;
   bottom: 4px;
   left: 50px;

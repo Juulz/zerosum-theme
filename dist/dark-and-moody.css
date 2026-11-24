@@ -6,11 +6,13 @@
   --destructive: hsl(15, 70%, 60%) !important;
   --chart-positive: hsl(123, 50%, 50%) !important;
   --positive: hsl(123, 50%, 50%) !important;
+  --positive-pill: var(--positive) !important;
   --foreground: hsl(213, 9%, 81%) !important;
+  --positive-pill-foreground: #000 !important;
 }
 
 body::after {
-  content: "CSS 11.24.26.1";
+  content: "CSS 11.24.26.2";
   position: fixed;
   bottom: 4px;
   left: 50px;
