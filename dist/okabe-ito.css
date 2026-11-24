@@ -10,8 +10,8 @@
   --primary: #47afeb !important;
   --chart-negative: #ff6f00 !important;
   --positive-strong: #00805e !important;
-  --positive-pill: #66d1b5 !important;
-  --positive-pill-foreground: #000 !important;
+  --positive-pill: #0c7458 !important;
+  --positive-pill-foreground: #fff !important;
   --destructive-strong: #b34d00 !important;
   --mantine-color-red-filled: #b34d00 !important;
   --status-cleared: #1affc2 !important;
@@ -31,7 +31,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.3";
+  content: "CSS 11.24.26.4";
   position: fixed;
   bottom: 4px;
   left: 50px;
