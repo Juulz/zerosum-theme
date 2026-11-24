@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.17.26.1";
+$css-version: "11.24.26.1";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -563,4 +563,13 @@ div[data-testid*="-side"] a#{$sidebar-button} span[class*="tabular-nums"][class*
 /* Day-of-week header row (Sun–Sat) above the grid */
 [data-testid="calendar-main"] .grid.grid-cols-7:not([data-testid="calendar-grid"]) > div {
   color: var(--primary) !important;
+}
+
+// ==========================================
+// 12. ACCOUNTS LIST
+// ==========================================
+
+/* "Matches bank" status: the only account subtitle with a positive check icon */
+a[href*="/accounts/"] span.text-muted-foreground:has(> svg.text-positive) > span {
+  color: var(--positive) !important;
 }
