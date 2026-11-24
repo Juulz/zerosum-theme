@@ -62,7 +62,10 @@ $positive:                              hsl(123, 50%, 50%);
 $chart-positive:                        hsl(123, 50%, 50%);
 $chart-negative:                        null; // this and the rest of the file: null keeps the site's
 $positive-strong:                       null;
-$positive-pill-foreground:              #000;
+$positive-pill:                         null;
+$positive-pill-foreground:              null;
+$warning-pill:                          null;
+$warning-pill-foreground:               null;
 $destructive-strong:                    null;
 $mantine-red-filled:                    null;
 
