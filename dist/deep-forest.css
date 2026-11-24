@@ -1,6 +1,7 @@
 @charset "UTF-8";
 :root {
   --mantine-color-brand-light-hover: #86682d !important;
+  --sidebar-hover: #86682d !important;
   --mantine-color-brand-light: #9a7733 !important;
   --background: #222222 !important;
   --destructive: hsl(6, 71%, 63%) !important;
@@ -36,7 +37,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.13";
+  content: "CSS 11.24.26.14";
   position: fixed;
   bottom: 4px;
   left: 50px;
