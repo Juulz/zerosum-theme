@@ -63,6 +63,7 @@ $positive:                              #6cc96a;
 $chart-positive:                        #6cc96a;
 $chart-negative:                        $destructive; // this and the rest of the file: null keeps the site's
 $positive-strong:                       #2f7a3a;
+$label-wash:                            null;
 $positive-pill:                         var(--label-wash);
 $positive-pill-foreground:              var(--positive);
 $warning-pill:                          var(--label-wash);

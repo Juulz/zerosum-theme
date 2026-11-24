@@ -62,6 +62,7 @@ $positive:                              hsl(123, 50%, 50%);
 $chart-positive:                        hsl(123, 50%, 50%);
 $chart-negative:                        null; // this and the rest of the file: null keeps the site's
 $positive-strong:                       null;
+$label-wash:                            null;
 $positive-pill:                         var(--label-wash);
 $positive-pill-foreground:              var(--positive);
 $warning-pill:                          var(--label-wash);
