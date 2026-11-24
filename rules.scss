@@ -1,7 +1,7 @@
 // ============================================
 // VERSION MARKER — ZeroSum Custom CSS by Juulz
 // ============================================
-$css-version: "11.24.26.19";
+$css-version: "11.24.26.24";
 
 // Colors come from a theme file (themes/*.scss); this file uses only variables.
 // Magic CSS quirks and override tricks: see NOTES.md.
@@ -59,12 +59,14 @@ $calendar-day:       '.grid.grid-cols-7 > button';
   @include site-var(primary,                  $primary);
   @include site-var(chart-negative,           $chart-negative);
   @include site-var(positive-strong,          $positive-strong);
+  @include site-var(positive-action,          $positive-action);
   @include site-var(label-wash,               $label-wash);
   @include site-var(positive-pill,            $positive-pill);
   @include site-var(positive-pill-foreground, $positive-pill-foreground);
   @include site-var(warning-pill,             $warning-pill);
   @include site-var(warning-pill-foreground,  $warning-pill-foreground);
   @include site-var(destructive-strong,       $destructive-strong);
+  @include site-var(destructive-action,       $destructive-action);
   @include site-var(destructive-pill,         $destructive-pill);
   @include site-var(destructive-pill-foreground, $destructive-pill-foreground);
   @include site-var(status-info-pill,         $status-info-pill);
@@ -339,6 +341,18 @@ div[role="table"][aria-label="Budget categories"] div[role="row"][class*="sticky
         background-image: none !important;
       }
     }
+  }
+}
+
+// Row divider lines in the ledger and budget tables: border-border (ledger day breaks, budget
+// categories) and border-border-subtle (ledger rows, 65% of --border) both derive from --border
+@if $table-row-border != null {
+  div[data-virtual-item-key] {
+    --border: #{$table-row-border} !important;
+  }
+  // Budget category rows use border-border; match the ledger's 65% border-border-subtle lines
+  div[role="row"][data-budget-category-id] {
+    --border: color-mix(in srgb, #{$table-row-border} 65%, transparent) !important;
   }
 }
 

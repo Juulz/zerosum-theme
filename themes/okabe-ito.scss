@@ -32,6 +32,7 @@ $table-bg:                              #333333;
 $table-hover:                           #404040;
 $table-selected:                        #43382d;
 $table-selected-hover:                  #4f4235;
+$table-row-border:                      #212121; // ledger and budget row divider lines (site --border); null keeps the site's
 
 // --- Scheduled transactions & forecast ---
 $scheduled-bg:                          #141520;
@@ -63,6 +64,7 @@ $positive:                              #1affc2;
 $chart-positive:                        #1affc2;
 $chart-negative:                        $destructive; // this and the rest of the file: null keeps the site's
 $positive-strong:                       #00805e;
+$positive-action:                       #0c7458;
 $label-wash:                            null;
 $positive-pill:                         var(--label-wash);
 $positive-pill-foreground:              var(--positive);
@@ -73,6 +75,7 @@ $destructive-pill-foreground:           var(--destructive);
 $status-info-pill:                      var(--label-wash);
 $status-info-pill-foreground:           var(--status-info);
 $destructive-strong:                    #b34d00;
+$destructive-action:                    #b25300;
 $mantine-red-filled:                    $destructive-strong;
 
 // --- Chart series (exported as site CSS variables) ---

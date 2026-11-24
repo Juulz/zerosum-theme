@@ -31,6 +31,7 @@ $table-bg:                              hsl(225, 19%, 23%);
 $table-hover:                           hsl(26, 12%, 30%);
 $table-selected:                        hsl(105, 13%, 26%);
 $table-selected-hover:                  hsl(105, 13%, 30%);
+$table-row-border:                      null;
 
 // --- Scheduled transactions & forecast ---
 $scheduled-bg:                          hsl(105, 13%, 0%);
@@ -62,6 +63,7 @@ $positive:                              hsl(123, 50%, 50%);
 $chart-positive:                        hsl(123, 50%, 50%);
 $chart-negative:                        null; // this and the rest of the file: null keeps the site's
 $positive-strong:                       null;
+$positive-action:                       null;
 $label-wash:                            null;
 $positive-pill:                         var(--label-wash);
 $positive-pill-foreground:              var(--positive);
@@ -72,6 +74,7 @@ $destructive-pill-foreground:           var(--destructive);
 $status-info-pill:                      var(--label-wash);
 $status-info-pill-foreground:           var(--status-info);
 $destructive-strong:                    null;
+$destructive-action:                    null;
 $mantine-red-filled:                    null;
 
 // --- Chart series (exported as site CSS variables) ---
