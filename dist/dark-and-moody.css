@@ -1,7 +1,6 @@
 @charset "UTF-8";
 :root {
   --mantine-color-brand-light-hover: hsl(26, 12%, 30%) !important;
-  --sidebar-hover: hsl(26, 12%, 30%) !important;
   --mantine-color-brand-light: hsl(26, 12%, 26%) !important;
   --background: hsl(225, 19%, 33%) !important;
   --destructive: hsl(15, 70%, 60%) !important;
@@ -19,7 +18,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.15";
+  content: "CSS 11.24.26.16";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -174,14 +173,6 @@ span[class*="text-sidebar-foreground/40"] {
 
 div.bg-wash-strong:has(button[aria-label=Undo]) .mantine-ActionIcon-root:not([data-disabled]):hover, div.bg-wash-strong:has(button[aria-label=Undo]) .mantine-ActionIcon-root[aria-expanded=true] {
   background-color: hsl(26, 12%, 30%) !important;
-}
-
-button[class*="hover:bg-sidebar-hover"]:hover, button[class*="hover:bg-sidebar-hover"][aria-expanded=true] {
-  background-color: hsl(26, 12%, 30%) !important;
-}
-
-[data-collapsible=icon] button[class*="hover:bg-sidebar-hover"]:hover {
-  background-color: transparent !important;
 }
 
 div[data-testid=virtuoso-item-list] {
