@@ -18,7 +18,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.16";
+  content: "CSS 11.24.26.17";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -150,6 +150,10 @@ button[class*="group/type-header"] svg {
 
 [data-slot=sidebar-menu-button]:hover, [data-slot=sidebar-menu-button][data-active=true], [data-slot=sidebar-menu-button].active {
   background-color: hsl(205, 60%, 80%) !important;
+}
+
+span[aria-hidden=true][class*=bg-sidebar-hover]:has(+ ul[data-sidebar=menu]) {
+  display: none !important;
 }
 
 .mantine-NavLink-root:hover, .mantine-NavLink-root[data-active=true], .mantine-NavLink-root.active {
