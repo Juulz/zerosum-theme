@@ -13,7 +13,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.8";
+  content: "CSS 11.24.26.9";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -55,6 +55,10 @@ div.sticky[class*=top-0][class*=bg-background][class*=hidden][class*="md:flex"] 
 
 .mantine-SegmentedControl-label[data-active=true] {
   color: hsl(17, 41%, 35%) !important;
+}
+
+.mantine-Checkbox-input:not(:checked):not(:indeterminate) {
+  background-color: transparent !important;
 }
 
 button.mantine-Button-root,
