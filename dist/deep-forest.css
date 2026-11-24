@@ -9,7 +9,15 @@
   --foreground: #d9e2ec !important;
   --chart-negative: hsl(6, 71%, 63%) !important;
   --positive-strong: #2f7a3a !important;
+  --positive-pill: var(--label-wash) !important;
+  --positive-pill-foreground: var(--positive) !important;
+  --warning-pill: var(--label-wash) !important;
+  --warning-pill-foreground: var(--warning) !important;
   --destructive-strong: #a8352a !important;
+  --destructive-pill: var(--label-wash) !important;
+  --destructive-pill-foreground: var(--destructive) !important;
+  --status-info-pill: var(--label-wash) !important;
+  --status-info-pill-foreground: var(--status-info) !important;
   --mantine-color-red-filled: #a8352a !important;
   --status-cleared: #6cc96a !important;
   --status-scheduled: #7fb3c9 !important;
@@ -28,7 +36,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.9";
+  content: "CSS 11.24.26.10";
   position: fixed;
   bottom: 4px;
   left: 50px;

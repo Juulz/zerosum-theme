@@ -62,14 +62,14 @@ $positive:                              hsl(123, 76%, 30%);
 $chart-positive:                        hsl(123, 76%, 33%);
 $chart-negative:                        null; // this and the rest of the file: null keeps the site's
 $positive-strong:                       null;
-$positive-pill:                         #78ba7b;
-$positive-pill-foreground:              #000;
-$warning-pill:                          #e6c866;
-$warning-pill-foreground:               #000;
-$destructive-pill:                      null;
-$destructive-pill-foreground:           null;
-$status-info-pill:                      null;
-$status-info-pill-foreground:           null;
+$positive-pill:                         var(--label-wash);
+$positive-pill-foreground:              var(--positive);
+$warning-pill:                          var(--label-wash);
+$warning-pill-foreground:               var(--warning);
+$destructive-pill:                      var(--label-wash);
+$destructive-pill-foreground:           var(--destructive);
+$status-info-pill:                      var(--label-wash);
+$status-info-pill-foreground:           var(--status-info);
 $destructive-strong:                    null;
 $mantine-red-filled:                    null;
 

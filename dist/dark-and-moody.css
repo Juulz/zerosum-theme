@@ -7,10 +7,18 @@
   --chart-positive: hsl(123, 50%, 50%) !important;
   --positive: hsl(123, 50%, 50%) !important;
   --foreground: hsl(213, 9%, 81%) !important;
+  --positive-pill: var(--label-wash) !important;
+  --positive-pill-foreground: var(--positive) !important;
+  --warning-pill: var(--label-wash) !important;
+  --warning-pill-foreground: var(--warning) !important;
+  --destructive-pill: var(--label-wash) !important;
+  --destructive-pill-foreground: var(--destructive) !important;
+  --status-info-pill: var(--label-wash) !important;
+  --status-info-pill-foreground: var(--status-info) !important;
 }
 
 body::after {
-  content: "CSS 11.24.26.9";
+  content: "CSS 11.24.26.10";
   position: fixed;
   bottom: 4px;
   left: 50px;
