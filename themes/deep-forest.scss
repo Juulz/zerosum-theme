@@ -32,7 +32,7 @@ $table-bg:                              #333333;
 $table-hover:                           #404237;
 $table-selected:                        #46402c;
 $table-selected-hover:                  #524a33;
-$table-row-border:                      null;
+$table-row-border:                      #212121; // ledger row divider lines (site --border); null keeps the site's
 
 // --- Scheduled transactions & forecast ---
 $scheduled-bg:                          #171a12;
