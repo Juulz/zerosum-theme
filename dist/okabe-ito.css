@@ -13,7 +13,7 @@
   --positive-pill: #0c7458 !important;
   --positive-pill-foreground: #fff !important;
   --destructive-strong: #b34d00 !important;
-  --destructive-pill: hsl(164, 100%, 25%) !important;
+  --destructive-pill: hsl(26, 100%, 25%) !important;
   --mantine-color-red-filled: #b34d00 !important;
   --status-cleared: #1affc2 !important;
   --status-scheduled: #4dbeff !important;
@@ -32,7 +32,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.5";
+  content: "CSS 11.24.26.6";
   position: fixed;
   bottom: 4px;
   left: 50px;
