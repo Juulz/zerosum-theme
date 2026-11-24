@@ -13,7 +13,7 @@
 }
 
 body::after {
-  content: "CSS 11.24.26.7";
+  content: "CSS 11.24.26.8";
   position: fixed;
   bottom: 4px;
   left: 50px;
@@ -134,7 +134,7 @@ button[class*="group/type-header"] svg {
   transform: scale(1) !important;
 }
 
-[data-slot=sidebar-inner], .bg-sidebar, div.flex.items-center.bg-muted\/50, div[id=budget-table-side] div[class*=bg-panel], div[id=calendar-side] div[class*=bg-panel] {
+[data-slot=sidebar-inner], .bg-sidebar, div.flex.items-center.bg-muted\/50, div.bg-wash-strong:has(button[aria-label=Undo]), div[id=budget-table-side] div[class*=bg-panel], div[id=calendar-side] div[class*=bg-panel] {
   background-color: hsl(70, 45%, 85%) !important;
   border-color: transparent !important;
 }
@@ -159,6 +159,10 @@ span[class*="text-sidebar-foreground/40"] {
 }
 
 .hover\:bg-sidebar-accent:hover, .hover\:bg-sidebar-accent[data-expanded=true], .hover\:bg-sidebar-accent\/40:hover, .hover\:bg-sidebar-accent\/40[data-expanded=true], .hover\:bg-sidebar-accent\/50:hover, .hover\:bg-sidebar-accent\/50[data-expanded=true] {
+  background-color: hsl(205, 60%, 80%) !important;
+}
+
+div.bg-wash-strong:has(button[aria-label=Undo]) .mantine-ActionIcon-root:not([data-disabled]):hover, div.bg-wash-strong:has(button[aria-label=Undo]) .mantine-ActionIcon-root[aria-expanded=true] {
   background-color: hsl(205, 60%, 80%) !important;
 }
 
